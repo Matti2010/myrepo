@@ -1,4 +1,0 @@
-- hosts: localhost
-  tasks:
-  - name: get "my repo" repo from git
-    git: repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no
