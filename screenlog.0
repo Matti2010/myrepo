@@ -1,0 +1,250 @@
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ gii[Kt add .
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   screenlog.0[m
+	[32mnew file:   task1.yml[m
+	[32mnew file:   task3.yml[m
+	[32mnew file:   task4.yml[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   screenlog.0[m
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git commit -m "release 1"[1P 1"[1P 1"[1P 1"[1P 1"[1P 1"[1P 1"[1P 1"[C[C[1P"[1P"c"o"m"m"i"t" "2"[1P"1"
+[master d1d805c] commit 1
+ Committer: EC2 Default User <ec2-user@ip-172-31-3-118.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 14 insertions(+)
+ create mode 100644 screenlog.0
+ create mode 100644 task1.yml
+ create mode 100644 task3.yml
+ create mode 100644 task4.yml
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   screenlog.0[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 6, done.
+Compressing objects:  20% (1/5)   Compressing objects:  40% (2/5)   Compressing objects:  60% (3/5)   Compressing objects:  80% (4/5)   Compressing objects: 100% (5/5)   Compressing objects: 100% (5/5), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 660 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To https://github.com/Matti2010/myrepo.git
+   60bacb1..d1d805c  master -> master
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   screenlog.0[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ [K[ec2-user@ip-172-31-3-118 myrepo]$ vi [K[K[Kvi [K[K[Kcat [K[K[K[Kvi task2[K3.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"task3.yml" 4L, 167C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m get [31m"my repo"[0m repo from git
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no
+[1m[34m~                                                                                                                               [6;1H~                                                                                                                               [7;1H~                                                                                                                               [8;1H~                                                                                                                               [9;1H~                                                                                                                               [10;1H~                                                                                                                               [11;1H~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H1,1[11CAll[1;1H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H1,1[11CAll[1;1H[34h[?25h[?25l[2;29r[2;1H[L[1;30r[1;1H[K[2;1H[33m- [0m[36mhosts[0m[35m:[0m localhost[30;111H[K[30;111H2,1[11CAll[2;1H[34h[?25h[?25l[3;29r[3;1H[L[1;30r[2;1H[K[3;1H[33m- [0m[36mhosts[0m[35m:[0m localhost[30;111H[K[30;111H3,1[11CAll[3;1H[34h[?25h[?25l[30;111H2[2;1H[34h[?25h[?25l[30;111H1[1;1H[34h[?25h[?25l[2;29r[2;1H[9L[1;30r[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/shimib/myrepo.git dest=~/repo
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/shimib/spring-petclinic.git dest=~/petclinic[30;111H[K[30;111H10,78[9CAll[10;78H[34h[?25h[?25l[30;112H1,1 [11;1H[34h[?25h[?25l[30;112H2,19[12;19H[34h[?25h[?25l[30;112H1,1 [11;1H[34h[?25h[?25l[30;112H2,19[12;19H[34h[?25h[?25l[30;115H8[12;18H[34h[?25h[?25l[30;115H7[12;17H[34h[?25h[?25l[30;115H6[12;16H[34h[?25h[?25l[30;115H5[12;15H[34h[?25h[?25l[30;115H4[12;14H[34h[?25h[?25l[30;115H3[12;13H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;112H1,1 [11;1H[34h[?25h[?25l[30;112H0,12[10;12H[34h[?25h[?25l[30;112H1,1 [11;1H[34h[?25h[?25l[30;112H0,12[10;12H[34h[?25h[?25l[30;111H9,12 [9;12H[34h[?25h[?25l[30;111H8[8;12H[34h[?25h[30;1H[K[?25l[30;111H8,11[10CAll[8;11H[34h[?25h[?25l[30;114H0[8;10H[34h[?25h[?25l[30;113H9 [8;9H[34h[?25h[?25l[30;113H10[8;10H[34h[?25h[?25lepo=https://github.com/shimib/myrepo.git dest=~/repo[8;62H[K[8;10H[34h[?25h[?25lpo=https://github.com/shimib/myrepo.git dest=~/repo[8;61H[K[8;10H[34h[?25h[?25lo=https://github.com/shimib/myrepo.git dest=~/repo[8;60H[K[8;10H[34h[?25h[?25l=https://github.com/shimib/myrepo.git dest=~/repo[8;59H[K[8;10H[34h[?25h[?25lhttps://github.com/shimib/myrepo.git dest=~/repo[8;58H[K[8;10H[34h[?25h[?25lttps://github.com/shimib/myrepo.git dest=~/repo[8;57H[K[8;10H[34h[?25h[?25ltps://github.com/shimib/myrepo.git dest=~/repo[8;56H[K[8;10H[34h[?25h[?25lps://github.com/shimib/myrepo.git dest=~/repo[8;55H[K[8;10H[34h[?25h[?25ls://github.com/shimib/myrepo.git dest=~/repo[8;54H[K[8;10H[34h[?25h[?25l://github.com/shimib/myrepo.git dest=~/repo[8;53H[K[8;10H[34h[?25h[?25l//github.com/shimib/myrepo.git dest=~/repo[8;52H[K[8;10H[34h[?25h[?25l/github.com/shimib/myrepo.git dest=~/repo[8;51H[K[8;10H[34h[?25h[?25lgithub.com/shimib/myrepo.git dest=~/repo[8;50H[K[8;10H[34h[?25h[?25lithub.com/shimib/myrepo.git dest=~/repo[8;49H[K[8;10H[34h[?25h[?25lthub.com/shimib/myrepo.git dest=~/repo[8;48H[K[8;10H[34h[?25h[?25lhub.com/shimib/myrepo.git dest=~/repo[8;47H[K[8;10H[34h[?25h[?25lub.com/shimib/myrepo.git dest=~/repo[8;46H[K[8;10H[34h[?25h[?25lb.com/shimib/myrepo.git dest=~/repo[8;45H[K[8;10H[34h[?25h[?25l.com/shimib/myrepo.git dest=~/repo[8;44H[K[8;10H[34h[?25h[?25lcom/shimib/myrepo.git dest=~/repo[8;43H[K[8;10H[34h[?25h[?25lom/shimib/myrepo.git dest=~/repo[8;42H[K[8;10H[34h[?25h[?25lm/shimib/myrepo.git dest=~/repo[8;41H[K[8;10H[34h[?25h[?25l/shimib/myrepo.git dest=~/repo[8;40H[K[8;10H[34h[?25h[?25lshimib/myrepo.git dest=~/repo[8;39H[K[8;10H[34h[?25h[?25lhimib/myrepo.git dest=~/repo[8;38H[K[8;10H[34h[?25h[?25limib/myrepo.git dest=~/repo[8;37H[K[8;10H[34h[?25h[?25lmib/myrepo.git dest=~/repo[8;36H[K[8;10H[34h[?25h[?25lib/myrepo.git dest=~/repo[8;35H[K[8;10H[34h[?25h[?25lb/myrepo.git dest=~/repo[8;34H[K[8;10H[34h[?25h[?25l/myrepo.git dest=~/repo[8;33H[K[8;10H[34h[?25h[?25lmyrepo.git dest=~/repo[8;32H[K[8;10H[34h[?25h[?25lyrepo.git dest=~/repo[8;31H[K[8;10H[34h[?25h[?25lrepo.git dest=~/repo[8;30H[K[8;10H[34h[?25h[?25lepo.git dest=~/repo[8;29H[K[8;10H[34h[?25h[?25lpo.git dest=~/repo[8;28H[K[8;10H[34h[?25h[?25lo.git dest=~/repo[8;27H[K[8;10H[34h[?25h[?25l.git dest=~/repo[8;26H[K[8;10H[34h[?25h[?25lgit dest=~/repo[8;25H[K[8;10H[34h[?25h[?25lit dest=~/repo[8;24H[K[8;10H[34h[?25h[?25lt dest=~/repo[8;23H[K[8;10H[34h[?25h[?25l dest=~/repo[8;22H[K[8;10H[34h[?25h[?25ldest=~/repo[8;21H[K[8;10H[34h[?25h[?25lest=~/repo[8;20H[K[8;10H[34h[?25h[?25lst=~/repo[8;19H[K[8;10H[34h[?25h[?25lt=~/repo[8;18H[K[8;10H[34h[?25h[?25l=~/repo[8;17H[K[8;10H[34h[?25h[?25l~/repo[8;16H[K[8;10H[34h[?25h[?25l/repo[8;15H[K[8;10H[34h[?25h[?25lrepo[8;14H[K[8;10H[34h[?25h[?25lepo[8;13H[K[8;10H[34h[?25h[?25lpo[8;12H[K[8;10H[34h[?25h[?25lo[8;11H[K[8;10H[34h[?25h[?25l[8;10H[K[30;113H9 [8;9H[34h[?25h[?25l[30;111H9,1[9;1H[34h[?25h[?25l[30;111H8[8;1H[34h[?25h[?25l[30;113H2[8;2H[34h[?25h[?25l[30;113H3[8;3H[34h[?25h[?25l[30;113H4[8;4H[34h[?25h[?25l[30;113H5[8;5H[34h[?25h[?25l[30;113H6[8;6H[34h[?25h[?25l[30;113H7[8;7H[34h[?25h[?25l[30;113H8[8;8H[34h[?25h[?25l[30;113H9[8;9H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H8,9[11CAll[8;9H[34h[?25h[?25l[30;113H10[8;10H[34h[?25h[?25lcom/shimib/myrepo.git dest=~/repo[30;113H43[8;43H[34h[?25h[30;1H[K[?25l[30;111H8,42[10CAll[8;42H[34h[?25h[?25l[30;1H1 change; before #56  8 seconds ago[30;111H[K[8;10H[K[30;111H8,9[11CAll[8;9H[34h[?25h[?25l[30;111H9,1[9;1H[34h[?25h[?25l[30;111H8[8;1H[34h[?25h[?25l[30;113H2[8;2H[34h[?25h[?25l[30;113H3[8;3H[34h[?25h[?25l[30;113H4[8;4H[34h[?25h[?25l[30;113H5[8;5H[34h[?25h[?25l[30;113H6[8;6H[34h[?25h[?25l[30;113H7[8;7H[34h[?25h[?25l[30;113H8[8;8H[34h[?25h[?25l[30;113H9[8;9H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H8,9[11CAll[8;9H[34h[?25h[?25l[30;113H10[8;10H[34h[?25h[?25lrepo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no[30;115H1[8;101H[34h[?25h[?25l[30;111H9,26 [9;26H[34h[?25h[?25l[30;111H10,78[10;78H[34h[?25h[30;1H[K[?25l[30;111H10,77[9CAll[10;77H[34h[?25h[?25l[10;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H10,0-1[8CAll[10;1H[34h[?25h[?25l[30;112H1,1  [11;1H[34h[?25h[?25l[30;114H2[11;2H[34h[?25h[?25l[30;114H3[11;3H[34h[?25h[?25l[30;114H4[11;4H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H11,4[10CAll[11;4H[36mt[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=noosts: localhost[30;114H98[11;98H[34h[?25h[?25l[30;112H0,1 [10;1H[34h[?25h[?25li[30;114H2[10;2H[34h[?25h[?25l[10;1H[K[30;114H1[10;1H[34h[?25h[?25l    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no[30;115H01[10;101H[34h[?25h[?25l[30;112H1[11;101H[34h[?25h[30;1H[K[11;100H[?25l[30;111H11,100[8CAll[11;100H[34h[?25h[?25l[11;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H11,3[10CAll[11;3H[34h[?25h[?25l[11;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H11,3[10CAll[11;3H[34h[?25h[?25l[11;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H11,5[10CAll[11;5H[34h[?25h[?25l[1m[34m~                                                                                                                               [0m[30;112H0[10;5H[34h[?25h[?25l[30;111H9,5 [9;5H[34h[?25h[?25l[30;113H6[9;6H[34h[?25h[?25l[30;113H7[9;7H[34h[?25h[?25l[30;113H8[9;8H[34h[?25h[?25l[30;111H10,8[10;8H[34h[?25h[?25l[30;114H9[10;9H[34h[?25h[?25l[30;114H10[10;10H[34h[?25h[?25l[30;115H1[10;11H[34h[?25h[?25l[30;115H2[10;12H[34h[?25h[?25l[30;115H3[10;13H[34h[?25h[?25l[30;115H4[10;14H[34h[?25h[?25l[30;115H5[10;15H[34h[?25h[?25l[30;115H6[10;16H[34h[?25h[?25l[30;115H7[10;17H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"task3.yml" 10L, 379C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi task3.yml [1P [1P [1P [1P [1P 4 .yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"task4.yml" 4L, 180C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m get [31m"my repo"[0m repo from git
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no
+[1m[34m~                                                                                                                               [6;1H~                                                                                                                               [7;1H~                                                                                                                               [8;1H~                                                                                                                               [9;1H~                                                                                                                               [10;1H~                                                                                                                               [11;1H~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H1,1[11CAll[1;1H[34h[?25h[?25l[30;111H2[2;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi task4.yml 3[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"task3.yml" 10L, 379C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no
+[1m[34m~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H10,5[10CAll[10;5H[34h[?25h[?25l[1m[34m~                                                                                                                               [0m[30;111H9,3 [9;3H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H9,26[10CAll[9;26H[34h[?25h[?25l[10;1H[K[30;111H10,1[10;1H[34h[?25h[?25l[36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no[30;115H10[10;110H[34h[?25h[?25l[30;115H  [10;1H[34h[?25h[?25l [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no[30;114H2[10;2H[34h[?25h[?25l [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no[30;114H3[10;3H[34h[?25h[?25l [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no[30;114H4[10;4H[34h[?25h[?25l [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic clone=yes update=no[30;114H5[10;5H[34h[?25h[?25l[30;114H6[10;6H[34h[?25h[?25l[30;114H7[10;7H[34h[?25h[?25l[30;114H8[10;8H[34h[?25h[?25l[30;114H9[10;9H[34h[?25h[?25l[30;114H10[10;10H[34h[?25h[30;1H[K[10;9H[?25l[30;111H10,9[10CAll[10;9H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H10,114[8CAll[10;114H[34h[?25h[?25l[30;116H3[10;113H[34h[?25h[?25l[30;116H2[10;112H[34h[?25h[?25l[30;116H1[10;111H[34h[?25h[?25l[30;116H0[10;110H[34h[?25h[?25l[30;115H09[10;109H[34h[?25h[?25l[30;116H8[10;108H[34h[?25h[?25l[30;116H7[10;107H[34h[?25h[?25l[30;116H6[10;106H[34h[?25h[?25l[30;116H5[10;105H[34h[?25h[?25l[30;116H6[10;106H[34h[?25h[?25l[30;116H7[10;107H[34h[?25h[?25l[30;116H8[10;108H[34h[?25h[?25l[30;116H9[10;109H[34h[?25h[?25l[30;115H10[10;110H[34h[?25h[?25l[30;116H1[10;111H[34h[?25h[?25l[30;116H2[10;112H[34h[?25h[?25l[30;116H3[10;113H[34h[?25h[?25l[30;116H4[10;114H[34h[?25h[?25l[10;113H[K[30;116H3[10;113H[34h[?25h[?25l[10;112H[K[30;116H2[10;112H[34h[?25h[?25l[10;111H[K[30;116H1[10;111H[34h[?25h[?25l[10;110H[K[30;116H0[10;110H[34h[?25h[?25l[10;109H[K[30;115H09[10;109H[34h[?25h[?25l[10;108H[K[30;116H8[10;108H[34h[?25h[?25l[10;107H[K[30;116H7[10;107H[34h[?25h[?25l[10;106H[K[30;116H6[10;106H[34h[?25h[?25l[10;105H[K[30;116H5[10;105H[34h[?25h[?25l[30;116H4[10;104H[34h[?25h[?25l[10;103H[K[30;116H3[10;103H[34h[?25h[?25l[10;102H[K[30;116H2[10;102H[34h[?25h[?25l[10;101H[K[30;116H1[10;101H[34h[?25h[?25l[10;100H[K[30;116H0[10;100H[34h[?25h[?25l[10;99H[K[30;114H99 [10;99H[34h[?25h[?25l[10;98H[K[30;115H8[10;98H[34h[?25h[?25l[10;97H[K[30;115H7[10;97H[34h[?25h[?25l[10;96H[K[30;115H6[10;96H[34h[?25h[?25l[10;95H[K[30;115H5[10;95H[34h[?25h[?25l[30;115H4[10;94H[34h[?25h[?25l[30;111H9,26 [9;26H[34h[?25h[?25l[30;111H8,94[8;94H[34h[?25h[?25l[30;114H5[8;95H[34h[?25h[?25l[30;114H6[8;96H[34h[?25h[?25l[30;114H7[8;97H[34h[?25h[?25l[30;114H8[8;98H[34h[?25h[?25l[30;114H9[8;99H[34h[?25h[?25l[30;113H100[8;100H[34h[?25h[?25l[30;115H1[8;101H[34h[?25h[?25l [30;115H0[8;100H[34h[?25h[?25l [30;113H99 [8;99H[34h[?25h[?25l [30;114H8[8;98H[34h[?25h[?25l [30;114H7[8;97H[34h[?25h[?25l [30;114H6[8;96H[34h[?25h[?25l [30;114H5[8;95H[34h[?25h[?25l [30;114H4[8;94H[34h[?25h[?25l [30;114H3[8;93H[34h[?25h[?25l [30;114H2[8;92H[34h[?25h[?25l[30;114H1[8;91H[34h[?25h[?25l [30;114H0[8;90H[34h[?25h[?25l [30;113H89[8;89H[34h[?25h[?25l [30;114H8[8;88H[34h[?25h[?25l [30;114H7[8;87H[34h[?25h[?25l [30;114H6[8;86H[34h[?25h[?25l [30;114H5[8;85H[34h[?25h[?25l [30;114H4[8;84H[34h[?25h[?25l [30;114H3[8;83H[34h[?25h[?25l [30;114H2[8;82H[34h[?25h[?25l[30;114H1[8;81H[34h[?25h[30;1H[K[?25l[30;111H8,80[10CAll[8;80H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"task3.yml" 10L, 352C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi task3.yml [1P[1P[1@c[1@p[C[1@ [C[C[C[C[C[C[C[C[C[C[C s e t u p . y m l 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Local modifications exist in repository (force=no)."}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [3Pcp  task3.yml[C[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi sw[Ketup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 10L, 352C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+[1m[34m~                                                                                                                               [12;1H~                                                                                                                               [13;1H~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H1,1[11CAll[1;1H[34h[?25h[?25l[30;111H2[2;1H[34h[?25h[?25l[30;111H3[3;1H[34h[?25h[?25l[30;111H4[4;1H[34h[?25h[?25l[30;111H5[5;1H[34h[?25h[?25l[30;111H6[6;1H[34h[?25h[?25l[30;111H7[7;1H[34h[?25h[?25l[30;111H8[8;1H[34h[?25h[?25l[30;111H9[9;1H[34h[?25h[?25l[30;111H10,1[10;1H[34h[?25h[?25l[30;111H9,1 [9;1H[34h[?25h[?25l[30;111H8[8;1H[34h[?25h[?25l[30;111H7[7;1H[34h[?25h[?25l[30;111H8[8;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hx[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status]
+git: 'status]' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status][K
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   screenlog.0[m
+	[31mmodified:   task3.yml[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31msetup.yml[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ git status^C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cd ..
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ cd petclinic/
+]0;ec2-user@ip-172-31-3-118:~/petclinic\[ec2-user@ip-172-31-3-118 petclinic]$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+]0;ec2-user@ip-172-31-3-118:~/petclinic\[ec2-user@ip-172-31-3-118 petclinic]$ cd ..
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ cd mya[Krepo/
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[Ca': git statusn': ansible-playbook setup.yml [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[C[C[C[1@i[C[C[C[9@[ec2-user@ip-172-31-3-118 myrepo]$[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Local modifications exist in repository (force=no)."}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ 
