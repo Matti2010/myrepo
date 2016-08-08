@@ -247,4 +247,26 @@ TASK [clone myrepo] ************************************************************
 PLAY RECAP *********************************************************************
 [0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 10L, 361C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    failed=0   
+
 ]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ 
