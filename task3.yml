@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+  - name: get "my repo" repo from git
+    git: repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo clone=yes update=no
