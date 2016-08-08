@@ -5,6 +5,10 @@
     become: yes
     become_method: sudo      
   - name: clone myrepo
-    git: repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo 
+    git: repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
   - name: clone petclinic
-    git: repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+    git: repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic 
+  - name: mkdir ~/maven
+    file: path=~/maven state=directory mode=0755
+  - name: install maven
+    unarchive: src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven" copy=no creates=~/maven/apache-maven-3.3.9/README.txt

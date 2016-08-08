@@ -269,4 +269,654 @@ TASK [clone petclinic] *********************************************************
 PLAY RECAP *********************************************************************
 [0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    failed=0   
 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cd ../
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ mkdir maven
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ cat setu[K[K[K[K[K[K[K[Kcd myrepo/
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[Cp': cd myrepo/l': ansible-playbook setup.yml [1@a[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Local modifications exist in repository (force=no)."}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 506C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[30;112H0[10;5H[34h[?25h[?25l[30;111H9,5 [9;5H[34h[?25h[?25l[30;111H8[8;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H8,82[10CAll[8;82H[34h[?25h[?25l-[30;114H3[8;83H[34h[?25h[?25lf[30;114H4[8;84H[34h[?25h[?25lo[30;114H5[8;85H[34h[?25h[?25lr[30;114H6[8;86H[34h[?25h[?25lc[30;114H7[8;87H[34h[?25h[?25le[30;114H8[8;88H[34h[?25h[?25l=[30;114H9[8;89H[34h[?25h[?25lt[30;113H90[8;90H[34h[?25h[?25lr[30;114H1[8;91H[34h[?25h[?25lu[30;114H2[8;92H[34h[?25h[?25l[31mtrue[0m[30;114H3[8;93H[34h[?25h[?25ltru[8;92H[K[30;114H2[8;92H[34h[?25h[?25l[8;91H[K[30;114H1[8;91H[34h[?25h[?25l[8;90H[K[30;114H0[8;90H[34h[?25h[?25l[8;89H[K[30;113H89[8;89H[34h[?25h[?25lo[30;113H90[8;90H[34h[?25h[?25ln[30;114H1[8;91H[34h[?25h[30;1H[K[8;90H[?25l[30;111H8,90[10CAll[8;90H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H8,91[10CAll[8;91H[34h[?25h[?25l[8;90H[K[30;114H0[8;90H[34h[?25h[?25l[8;89H[K[30;113H89[8;89H[34h[?25h[?25l:[30;113H90[8;90H[34h[?25h[?25lQ[30;114H1[8;91H[34h[?25h[?25l[9;29r[9;1H[L[1;30r[30;111H[K[30;111H9,1[11CAll[9;1H[34h[?25h[?25l:[30;113H2[9;2H[34h[?25h[?25lq[30;113H3[9;3H[34h[?25h[?25l![30;113H4[9;4H[34h[?25h[?25l[10;29r[10;1H[L[1;30r[30;111H[K[30;111H10,1[10CAll[10;1H[34h[?25h[30;1H[K[10;1H[?25l[30;111H10,0-1[8CAll[10;1H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hq![?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 506C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H10,5[10CAll[10;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H10,94[9CAll[10;94H[34h[?25h[?25l[30;115H5[10;95H[34h[?25h[?25l[30;111H9,26 [9;26H[34h[?25h[?25l[30;111H8,82[8;82H[34h[?25h[?25l-[30;114H3[8;83H[34h[?25h[?25lf[30;114H4[8;84H[34h[?25h[?25lo[30;114H5[8;85H[34h[?25h[?25lr[30;114H6[8;86H[34h[?25h[?25lm[30;114H7[8;87H[34h[?25h[?25la[30;114H8[8;88H[34h[?25h[?25l[8;87H[K[30;114H7[8;87H[34h[?25h[?25l[8;86H[K[30;114H6[8;86H[34h[?25h[?25lc[30;114H7[8;87H[34h[?25h[?25le[30;114H8[8;88H[34h[?25h[?25l=[30;114H9[8;89H[34h[?25h[?25le[30;113H90[8;90H[34h[?25h[?25ly[30;114H1[8;91H[34h[?25h[?25ls[30;114H2[8;92H[34h[?25h[?25l[8;91H[K[30;114H1[8;91H[34h[?25h[?25l[8;90H[K[30;114H0[8;90H[34h[?25h[?25l[8;89H[K[30;113H89[8;89H[34h[?25h[?25ly[30;113H90[8;90H[34h[?25h[?25le[30;114H1[8;91H[34h[?25h[?25ls[30;114H2[8;92H[34h[?25h[30;1H[K[8;91H[?25l[30;111H8,91[10CAll[8;91H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 517C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "unsupported parameter for module: -force"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 517C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo -force=yes
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H8,5[11CAll[8;5H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l![34h[?25h[?25l[30;3H[K[30;3H[34h[?25h[?25l[30;2H[K[30;2H[34h[?25hx[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 517C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo -force=yes
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H8,5[11CAll[8;5H[34h[?25h[?25l[30;111H9,3[9;3H[34h[?25h[?25l[30;111H8[8;3H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H8,92[10CAll[8;92H[34h[?25h[?25l[30;114H1[8;91H[34h[?25h[?25l[30;114H0[8;90H[34h[?25h[?25l[30;113H89[8;89H[34h[?25h[?25l[30;114H8[8;88H[34h[?25h[?25l=yes[8;91H[K[30;114H7[8;87H[34h[?25h[?25l=yes[8;90H[K[30;114H6[8;86H[34h[?25h[?25l=yes[8;89H[K[30;114H5[8;85H[34h[?25h[?25l=yes[8;88H[K[30;114H4[8;84H[34h[?25h[?25l=yes[8;87H[K[30;114H3[8;83H[34h[?25h[?25l=yes[8;86H[K[30;114H2[8;82H[34h[?25h[?25lu=yes[30;114H3[8;83H[34h[?25h[?25lp=yes[30;114H4[8;84H[34h[?25h[?25ld=yes[30;114H5[8;85H[34h[?25h[?25la=yes[30;114H6[8;86H[34h[?25h[?25lt=yes[30;114H7[8;87H[34h[?25h[?25le=yes[30;114H8[8;88H[34h[?25h[?25l[30;114H9[8;89H[34h[?25h[?25l[30;113H90[8;90H[34h[?25h[?25l[30;114H1[8;91H[34h[?25h[?25l[30;114H2[8;92H[34h[?25h[?25l[8;91H[K[30;114H1[8;91H[34h[?25h[?25l[8;90H[K[30;114H0[8;90H[34h[?25h[?25l[8;89H[K[30;113H89[8;89H[34h[?25h[?25ln[30;113H90[8;90H[34h[?25h[?25lp[30;114H1[8;91H[34h[?25h[?25lo[30;114H2[8;92H[34h[?25h[?25l[8;91H[K[30;114H1[8;91H[34h[?25h[?25l[8;90H[K[30;114H0[8;90H[34h[?25h[?25lo[30;114H1[8;91H[34h[?25h[30;1H[K[8;90H[?25l[30;111H8,90[10CAll[8;90H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 516C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 516C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H8,5[11CAll[8;5H[34h[?25h[?25l[30;111H9[9;5H[34h[?25h[?25l[30;111H8[8;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H8,91[10CAll[8;91H[34h[?25h[?25l[30;114H0[8;90H[34h[?25h[?25l[30;113H89[8;89H[34h[?25h[?25l[30;114H8[8;88H[34h[?25h[?25l[30;114H7[8;87H[34h[?25h[?25l[30;114H6[8;86H[34h[?25h[?25l[30;114H5[8;85H[34h[?25h[?25l[30;114H4[8;84H[34h[?25h[?25l[30;114H3[8;83H[34h[?25h[?25l[30;114H2[8;82H[34h[?25h[?25l-update=no[30;114H3[8;83H[34h[?25h[30;1H[K[8;82H[?25l[30;111H8,82[10CAll[8;82H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 517C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "unsupported parameter for module: -update"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m2[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 517C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo -update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H8,5[11CAll[8;5H[34h[?25h[?25l[30;111H9[9;5H[34h[?25h[?25l[30;111H8[8;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H8,92[10CAll[8;92H[34h[?25h[?25l[30;114H1[8;91H[34h[?25h[?25l[30;114H0[8;90H[34h[?25h[?25l[30;113H89[8;89H[34h[?25h[?25l[30;114H8[8;88H[34h[?25h[?25l[30;114H7[8;87H[34h[?25h[?25l[30;114H6[8;86H[34h[?25h[?25l[30;114H5[8;85H[34h[?25h[?25l[30;114H4[8;84H[34h[?25h[?25l[30;114H3[8;83H[34h[?25h[?25lupdate=no[8;91H[K[30;114H2[8;82H[34h[?25h[30;1H[K[8;81H[?25l[30;111H8,81[10CAll[8;81H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 516C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 516C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H8,5[11CAll[8;5H[34h[?25h[?25l[30;111H9[9;5H[34h[?25h[?25l[30;111H10,5[10;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[30;112H2[12;5H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H8[12;8H[34h[?25h[?25l[30;114H9[12;9H[34h[?25h[?25l[30;114H10[12;10H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;115H3[12;13H[34h[?25h[?25l[30;115H4[12;14H[34h[?25h[?25l[30;115H5[12;15H[34h[?25h[?25l[30;115H6[12;16H[34h[?25h[?25l[30;115H7[12;17H[34h[?25h[?25l[30;115H8[12;18H[34h[?25h[?25l[30;115H9[12;19H[34h[?25h[?25l[30;114H20[12;20H[34h[?25h[?25l[30;115H1[12;21H[34h[?25h[?25l[30;115H2[12;22H[34h[?25h[?25l[30;115H3[12;23H[34h[?25h[?25l[30;115H4[12;24H[34h[?25h[?25l[30;115H5[12;25H[34h[?25h[?25l[30;115H6[12;26H[34h[?25h[?25l[30;115H7[12;27H[34h[?25h[?25l[30;115H8[12;28H[34h[?25h[?25l[30;115H9[12;29H[34h[?25h[?25l[30;114H30[12;30H[34h[?25h[?25l[30;115H1[12;31H[34h[?25h[?25l[30;115H2[12;32H[34h[?25h[?25l[30;115H3[12;33H[34h[?25h[?25l[30;115H4[12;34H[34h[?25h[?25l[30;115H5[12;35H[34h[?25h[?25l[30;115H6[12;36H[34h[?25h[?25l[30;115H7[12;37H[34h[?25h[?25l[30;115H8[12;38H[34h[?25h[?25l[30;115H9[12;39H[34h[?25h[?25l[30;114H40[12;40H[34h[?25h[?25l[30;115H1[12;41H[34h[?25h[?25l[30;115H2[12;42H[34h[?25h[?25l[30;115H3[12;43H[34h[?25h[?25l[30;115H4[12;44H[34h[?25h[?25l[30;115H5[12;45H[34h[?25h[?25l[30;115H6[12;46H[34h[?25h[?25l[30;115H7[12;47H[34h[?25h[?25l[30;115H8[12;48H[34h[?25h[?25l[30;115H9[12;49H[34h[?25h[?25l[30;114H50[12;50H[34h[?25h[?25l[30;115H1[12;51H[34h[?25h[?25l[30;115H2[12;52H[34h[?25h[?25l[30;115H3[12;53H[34h[?25h[?25l[30;115H4[12;54H[34h[?25h[?25l[30;115H5[12;55H[34h[?25h[?25l[30;115H6[12;56H[34h[?25h[?25l[30;115H7[12;57H[34h[?25h[?25l[30;115H8[12;58H[34h[?25h[?25l[30;115H9[12;59H[34h[?25h[?25l[30;114H60[12;60H[34h[?25h[?25l[30;115H1[12;61H[34h[?25h[?25l[30;115H2[12;62H[34h[?25h[?25l[30;115H3[12;63H[34h[?25h[?25l[30;115H4[12;64H[34h[?25h[?25l[30;115H5[12;65H[34h[?25h[?25l[30;115H6[12;66H[34h[?25h[?25l[30;115H7[12;67H[34h[?25h[?25l[30;115H8[12;68H[34h[?25h[?25l[30;115H9[12;69H[34h[?25h[?25l[30;114H70[12;70H[34h[?25h[?25l[30;115H1[12;71H[34h[?25h[?25l[30;115H2[12;72H[34h[?25h[?25l[30;115H3[12;73H[34h[?25h[?25l[30;115H4[12;74H[34h[?25h[?25l[30;115H5[12;75H[34h[?25h[?25l[30;115H6[12;76H[34h[?25h[?25l[30;115H7[12;77H[34h[?25h[?25l[30;115H8[12;78H[34h[?25h[?25l[30;115H9[12;79H[34h[?25h[?25l[30;114H80[12;80H[34h[?25h[?25l[30;115H1[12;81H[34h[?25h[?25l[30;115H2[12;82H[34h[?25h[?25l[30;115H3[12;83H[34h[?25h[?25l[30;115H4[12;84H[34h[?25h[?25l[30;115H5[12;85H[34h[?25h[?25l[30;115H6[12;86H[34h[?25h[?25l[30;115H7[12;87H[34h[?25h[?25l[30;115H8[12;88H[34h[?25h[?25l[30;115H9[12;89H[34h[?25h[?25l[30;114H90[12;90H[34h[?25h[?25l[30;115H1[12;91H[34h[?25h[?25l[30;115H2[12;92H[34h[?25h[?25l[30;115H3[12;93H[34h[?25h[?25l[30;115H4[12;94H[34h[?25h[?25l[30;115H5[12;95H[34h[?25h[?25l[30;115H6[12;96H[34h[?25h[?25l[30;115H7[12;97H[34h[?25h[?25l[30;115H8[12;98H[34h[?25h[?25l[30;115H9[12;99H[34h[?25h[?25l[30;114H100[12;100H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hx[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ../
+total 16
+drwxrwxr-x 2 ec2-user ec2-user 4096 Aug  8 10:18 [0m[01;34mmati[0m
+drwxrwxr-x 5 ec2-user ec2-user 4096 Aug  8 11:15 [01;34mpetclinic[0m
+drwxrwxr-x 2 ec2-user ec2-user 4096 Aug  8 12:49 [01;34mmaven[0m
+drwxrwxr-x 3 ec2-user ec2-user 4096 Aug  8 12:52 [01;34mmyrepo[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cd Z[K~/
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ ls- ltr
+bash: ls-: command not found
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ ls -tlr
+total 16
+drwxrwxr-x 2 ec2-user ec2-user 4096 Aug  8 10:18 [0m[01;34mmati[0m
+drwxrwxr-x 5 ec2-user ec2-user 4096 Aug  8 11:15 [01;34mpetclinic[0m
+drwxrwxr-x 2 ec2-user ec2-user 4096 Aug  8 12:49 [01;34mmaven[0m
+drwxrwxr-x 3 ec2-user ec2-user 4096 Aug  8 12:52 [01;34mmyrepo[0m
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ ls -ltr maven/
+total 0
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ cd .[Kmyrepo/
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[Ca': ls -ltr maven/n': ansible-playbook setup.yml [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 516C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven remote_src=yee[13;1Hs
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[30;112H2[12;5H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H8[12;8H[34h[?25h[?25l[30;114H9[12;9H[34h[?25h[?25l[30;114H10[12;10H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;115H3[12;13H[34h[?25h[?25l[30;115H4[12;14H[34h[?25h[?25l[30;115H5[12;15H[34h[?25h[?25l[30;115H6[12;16H[34h[?25h[?25l[30;115H7[12;17H[34h[?25h[?25l[30;115H8[12;18H[34h[?25h[?25l[30;115H9[12;19H[34h[?25h[?25l[30;114H20[12;20H[34h[?25h[?25l[30;115H1[12;21H[34h[?25h[?25l[30;115H2[12;22H[34h[?25h[?25l[30;115H3[12;23H[34h[?25h[?25l[30;115H4[12;24H[34h[?25h[?25l[30;115H5[12;25H[34h[?25h[?25l[30;115H6[12;26H[34h[?25h[?25l[30;115H7[12;27H[34h[?25h[?25l[30;115H8[12;28H[34h[?25h[?25l[30;115H9[12;29H[34h[?25h[?25l[30;114H30[12;30H[34h[?25h[?25l[30;115H1[12;31H[34h[?25h[?25l[30;115H2[12;32H[34h[?25h[?25l[30;115H3[12;33H[34h[?25h[?25l[30;115H4[12;34H[34h[?25h[?25l[30;115H5[12;35H[34h[?25h[?25l[30;115H6[12;36H[34h[?25h[?25l[30;115H7[12;37H[34h[?25h[?25l[30;115H8[12;38H[34h[?25h[?25l[30;115H9[12;39H[34h[?25h[?25l[30;114H40[12;40H[34h[?25h[?25l[30;115H1[12;41H[34h[?25h[?25l[30;115H2[12;42H[34h[?25h[?25l[30;115H3[12;43H[34h[?25h[?25l[30;115H4[12;44H[34h[?25h[?25l[30;115H3[12;43H[34h[?25h[?25l[30;115H2[12;42H[34h[?25h[?25l[30;115H1[12;41H[34h[?25h[?25l[30;115H0[12;40H[34h[?25h[?25l[30;114H39[12;39H[34h[?25h[?25l[30;115H8[12;38H[34h[?25h[?25l[30;115H7[12;37H[34h[?25h[?25l[30;115H6[12;36H[34h[?25h[?25l[30;115H5[12;35H[34h[?25h[?25l[30;115H4[12;34H[34h[?25h[?25l[30;115H3[12;33H[34h[?25h[?25l[30;115H2[12;32H[34h[?25h[?25l[30;115H1[12;31H[34h[?25h[?25l[30;115H0[12;30H[34h[?25h[?25l[30;114H29[12;29H[34h[?25h[?25l[30;115H8[12;28H[34h[?25h[?25l[30;115H7[12;27H[34h[?25h[?25l[30;115H6[12;26H[34h[?25h[?25l[30;115H5[12;25H[34h[?25h[?25l[30;115H4[12;24H[34h[?25h[?25l[30;114H129[13;1H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H12,130[8CAll[13;2H[34h[?25h[?25l[1m[34m~                                                                                                                               [0m[30;115H29[13;1H[34h[?25h[?25l[12;128H[K[30;116H8[12;128H[34h[?25h[?25l[12;127H[K[30;116H7[12;127H[34h[?25h[?25l[12;126H[K[30;116H6[12;126H[34h[?25h[?25l[12;125H[K[30;116H5[12;125H[34h[?25h[?25l[12;124H[K[30;116H4[12;124H[34h[?25h[?25l[12;123H[K[30;116H3[12;123H[34h[?25h[?25l[12;122H[K[30;116H2[12;122H[34h[?25h[?25l[12;121H[K[30;116H1[12;121H[34h[?25h[?25l[12;120H[K[30;116H0[12;120H[34h[?25h[?25l[12;119H[K[30;115H19[12;119H[34h[?25h[?25l[12;118H[K[30;116H8[12;118H[34h[?25h[?25l[12;117H[K[30;116H7[12;117H[34h[?25h[?25l[12;116H[K[30;116H6[12;116H[34h[?25h[?25l[30;116H5[12;115H[34h[?25h[30;1H[K[?25l[30;111H12,114[8CAll[12;114H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 501C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 501C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven
+[1m[34m~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cd ../maven/
+]0;ec2-user@ip-172-31-3-118:~/maven\[ec2-user@ip-172-31-3-118 maven]$ pwd
+/home/ec2-user/maven
+]0;ec2-user@ip-172-31-3-118:~/maven\[ec2-user@ip-172-31-3-118 maven]$ cd ../
+]0;ec2-user@ip-172-31-3-118:~\[ec2-user@ip-172-31-3-118 ~]$ cd myrepo/
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr
+total 104
+-rw-rw-r-- 1 ec2-user ec2-user     8 Aug  8 11:16 README.md
+-rw-rw-r-- 1 ec2-user ec2-user   501 Aug  8 12:54 setup.yml
+-rw-rw-r-- 1 ec2-user ec2-user 92257 Aug  8 12:57 screenlog.0
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 501C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/maven
+[1m[34m~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H12,115[8CAll[12;115H[34h[?25h[?25l[30;116H4[12;114H[34h[?25h[?25l[30;116H5[12;115H[34h[?25h[?25l[12;114H[K[30;116H4[12;114H[34h[?25h[?25l[12;113H[K[30;116H3[12;113H[34h[?25h[?25l[12;112H[K[30;116H2[12;112H[34h[?25h[?25l[12;111H[K[30;116H1[12;111H[34h[?25h[?25l[12;110H[K[30;116H0[12;110H[34h[?25h[?25l[12;109H[K[30;115H09[12;109H[34h[?25h[?25l[12;108H[K[30;116H8[12;108H[34h[?25h[?25l/home/ec2-user/maven[30;115H2[12;128H[34h[?25h[30;1H[K[?25l[30;111H12,127[8CAll[12;127H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 514C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [6Pls -ltrcd myrepo/[3Pls -ltrvi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 514C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=/home/ec2-user/maven
+[1m[34m~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[14@m': vi setup.yml[2Py': cd myrepo/^C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[14@p': vi setup.yml[15@l': ansible-playbook[1@a[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ :q[K[Kansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 514C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=/home/ec2-user/maven
+[1m[34m~                                                                                                                               [14;1H~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H11,5[10CAll[11;5H[34h[?25h[?25l[12;29r[12;1H[L[1;30r[11;5H[K[12;1H[36mname[0m[35m:[0m install maven[30;111H[K[30;111H12,1[10CAll[12;1H[34h[?25h[?25l[30;112H1[11;1H[34h[?25h[?25l[30;114H2[11;2H[34h[?25h[?25l[30;114H3[11;3H[34h[?25h[?25l[30;114H4[11;4H[34h[?25h[?25l-n[30;114H5[11;5H[34h[?25h[?25la[30;114H6[11;6H[34h[?25h[?25lm[30;114H7[11;7H[34h[?25h[?25le[30;114H8[11;8H[34h[?25h[?25l[30;114H7[11;7H[34h[?25h[?25l[30;114H6[11;6H[34h[?25h[?25l[30;114H5[11;5H[34h[?25h[?25l[30;114H4[11;4H[34h[?25h[?25l[33m- [0mname[30;114H5[11;5H[34h[?25h[?25l[30;114H6[11;6H[34h[?25h[?25l[30;114H7[11;7H[34h[?25h[?25l[30;114H8[11;8H[34h[?25h[?25l[30;114H9[11;9H[34h[?25h[?25l[36mname[0m[35m:[0m[30;114H10[11;10H[34h[?25h[?25l[30;115H1[11;11H[34h[?25h[?25l[12;29r[12;1H[L[1;30r[30;111H[K[30;111H12,1[10CAll[12;1H[34h[?25h[?25l[30;114H9[12;9H[34h[?25h[?25l[30;114H8[12;8H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H5[12;5H[34h[?25h[?25lf[30;114H6[12;6H[34h[?25h[?25li[30;114H7[12;7H[34h[?25h[?25ll[30;114H8[12;8H[34h[?25h[?25le[30;114H9[12;9H[34h[?25h[?25lr[30;114H10[12;10H[34h[?25h[?25l [30;114H9 [12;9H[34h[?25h[?25l[36mfile[0m[35m:[0m[30;114H10[12;10H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25lp[30;115H2[12;12H[34h[?25h[?25la[30;115H3[12;13H[34h[?25h[?25lt[30;115H4[12;14H[34h[?25h[?25lh[30;115H5[12;15H[34h[?25h[30;1H[K[12;14H[?25l[30;111H12,14[9CAll[12;14H[34h[?25h[?25l[30;1H1 line less; before #4  39 seconds ago[30;111H[K[11;29r[29;1H
+[1;30r[11;3H[33m- [0mname [11;11H[K[29;1H[1m[34m~                                                                                                                               [0m[30;1H[K[30;111H11,9[10CAll[11;9H[34h[?25h[?25l[30;1H1 change; before #3  40 seconds ago[30;111H[K[11;3H-name [30;111H11,4[10CAll[11;4H[34h[?25h[?25l[30;19H2  43[30;111H[K[11;3H[33m- [0m[11;5H[K[30;111H11,4[10CAll[11;4H[34h[?25h[?25l[30;3Hline less; before #1  47 seconds ago[30;111H[K[11;29r[29;1H
+[1;30r[11;1H  [33m- [0m[36mname[0m[35m:[0m install maven[29;1H[1m[34m~                                                                                                                               [0m[30;1H[K[30;111H11,5[10CAll[11;5H[34h[?25h[?25l[30;112H2[12;5H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H8[12;8H[34h[?25h[?25l[30;114H9[12;9H[34h[?25h[?25l[30;114H10[12;10H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;115H3[12;13H[34h[?25h[?25l[30;115H4[12;14H[34h[?25h[?25l[30;115H5[12;15H[34h[?25h[?25l[30;115H6[12;16H[34h[?25h[?25l[30;115H7[12;17H[34h[?25h[?25l[30;115H8[12;18H[34h[?25h[?25l[30;115H9[12;19H[34h[?25h[?25l[30;114H20[12;20H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25h[?25l[30;1H[K[30;111H12,20[9CAll[12;20H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H12,20[9CAll[12;20H[34h[?25h[?25l"http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=/home/ec2-user/maven[30;115H1[12;21H[34h[?25h[?25l[30;114H129[13;1H[34h[?25h[?25l[30;116H8[12;128H[34h[?25h[?25l[30;116H7[12;127H[34h[?25h[?25l[30;116H6[12;126H[34h[?25h[?25l[30;116H5[12;125H[34h[?25h[?25l[30;116H4[12;124H[34h[?25h[?25l[30;116H3[12;123H[34h[?25h[?25l[30;116H2[12;122H[34h[?25h[?25l[30;116H1[12;121H[34h[?25h[?25l[30;116H0[12;120H[34h[?25h[?25l[30;115H19[12;119H[34h[?25h[?25l[30;116H8[12;118H[34h[?25h[?25l[30;116H7[12;117H[34h[?25h[?25l[30;116H6[12;116H[34h[?25h[?25l[30;116H5[12;115H[34h[?25h[?25l[30;116H4[12;114H[34h[?25h[?25l[30;116H3[12;113H[34h[?25h[?25l[30;116H2[12;112H[34h[?25h[?25l[30;116H1[12;111H[34h[?25h[?25l[30;116H0[12;110H[34h[?25h[?25l[30;115H09[12;109H[34h[?25h[?25l[30;116H8[12;108H[34h[?25h[?25l[30;116H7[12;107H[34h[?25h[?25l[30;116H6[12;106H[34h[?25h[?25l[30;116H5[12;105H[34h[?25h[?25l[30;116H4[12;104H[34h[?25h[?25l[30;116H3[12;103H[34h[?25h[?25l[30;116H2[12;102H[34h[?25h[?25l[30;116H3[12;103H[34h[?25h[?25l" dest=/home/ec2-user/mavee[13;1Hn[13;2H[K[30;116H4[12;104H[34h[?25h[?25l[30;116H5[12;105H[34h[?25h[?25l[30;116H6[12;106H[34h[?25h[?25l[30;116H7[12;107H[34h[?25h[?25l[30;116H8[12;108H[34h[?25h[?25l[30;116H9[12;109H[34h[?25h[?25l[30;115H10[12;110H[34h[?25h[?25l"/home/ec2-user/mavv[13;1Hen[30;116H1[12;111H[34h[?25h[?25l[30;116H2[12;112H[34h[?25h[?25l[30;116H3[12;113H[34h[?25h[?25l[30;116H4[12;114H[34h[?25h[?25l[30;116H5[12;115H[34h[?25h[?25l[30;116H6[12;116H[34h[?25h[?25l[30;116H7[12;117H[34h[?25h[?25l[30;116H8[12;118H[34h[?25h[?25l[30;116H9[12;119H[34h[?25h[?25l[30;115H20[12;120H[34h[?25h[?25l[30;116H1[12;121H[34h[?25h[?25l[30;116H2[12;122H[34h[?25h[?25l[30;116H3[12;123H[34h[?25h[?25l[30;116H4[12;124H[34h[?25h[?25l[30;116H5[12;125H[34h[?25h[?25l[30;116H6[12;126H[34h[?25h[?25l[30;116H7[12;127H[34h[?25h[?25l[30;116H8[12;128H[34h[?25h[?25l[30;116H9[13;1H[34h[?25h[?25l[30;115H30[13;2H[34h[?25h[?25l[30;116H1[13;3H[34h[?25h[?25l"[30;116H2[13;4H[34h[?25h[30;1H[K[13;3H[?25l[30;111H12,131[8CAll[13;3H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 12L, 518C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C[14Pvi[C[C[C[C[C[C[C[C[C[C[C[14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m4[0m    changed=0    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 12L, 518C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[13;1Hen"
+[1m[34m~                                                                                                                               [15;1H~                                                                                                                               [16;1H~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[30;112H0[10;5H[34h[?25h[?25l[30;111H9,5 [9;5H[34h[?25h[?25l[30;111H10,5[10;5H[34h[?25h[?25l[30;112H1[11;5H[34h[?25h[?25l[12;29r[12;1H[L[1;30r[12;3H[33m- [0m[36mname[0m[35m:[0m install maven[30;1H[K[30;111H12,3[10CAll[12;3H[34h[?25h[?25l[30;112H1[11;3H[34h[?25h[?25l[30;112H2[12;3H[34h[?25h[?25l[30;112H3[13;3H[34h[?25h[?25l[30;112H2[12;3H[34h[?25h[?25l[30;112H3[13;3H[34h[?25h[?25l[30;112H2[12;3H[34h[?25h[?25l[13;29r[13;1H[2L[1;30r[13;5H[36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[14;1Hen"[30;111H[K[30;111H13,5[10CAll[13;5H[34h[?25h[?25l[30;1H1 line less; before #2  2 seconds ago[30;111H[K[13;29r[13;1H[2M[1;30r[28;1H[1m[34m~                                                                                                                               [29;1H~                                                                                                                               [0m[30;1H[K[30;111H12,3[10CAll[12;3H[34h[?25h[?25l[30;112H1[11;3H[34h[?25h[?25l[12;29r[12;1H[2L[1;30r[12;5H[36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[13;1Hen"[30;111H[K[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H5[12;5H[34h[?25h[?25l[36mnarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavee[13;1Hn"[13;3H[K[12;5H[34h[?25h[?25l[36marchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavenn[13;1H"[13;2H[K[12;5H[34h[?25h[?25l[12;29r[29;1H
+[1;30r[12;1H    [36mrchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[36mchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;128H[K[12;5H[34h[?25h[?25l[36mhive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;127H[K[12;5H[34h[?25h[?25l[36mive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;126H[K[12;5H[34h[?25h[?25l[36mve[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;125H[K[12;5H[34h[?25h[?25l[36me[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;124H[K[12;5H[34h[?25h[?25l: src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;123H[K[12;5H[34h[?25h[?25l[30;114H33[12;33H[34h[?25h[?25l[30;115H4[12;34H[34h[?25h[?25l[30;115H5[12;35H[34h[?25h[?25l[30;115H4[12;34H[34h[?25h[?25l[30;115H3[12;33H[34h[?25h[?25l[30;115H2[12;32H[34h[?25h[?25l[30;115H1[12;31H[34h[?25h[?25l[30;115H0[12;30H[34h[?25h[?25l[30;114H29[12;29H[34h[?25h[?25l[30;115H8[12;28H[34h[?25h[?25l[30;115H7[12;27H[34h[?25h[?25l[30;115H6[12;26H[34h[?25h[?25l[30;115H5[12;25H[34h[?25h[?25l[30;115H4[12;24H[34h[?25h[?25l[30;115H3[12;23H[34h[?25h[?25l[30;115H2[12;22H[34h[?25h[?25l[30;115H1[12;21H[34h[?25h[?25l[30;115H0[12;20H[34h[?25h[?25l[30;114H19[12;19H[34h[?25h[?25l[30;115H8[12;18H[34h[?25h[?25l[30;115H7[12;17H[34h[?25h[?25l[30;115H6[12;16H[34h[?25h[?25l[30;115H5[12;15H[34h[?25h[?25l[30;115H4[12;14H[34h[?25h[?25l[30;115H3[12;13H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25l[30;115H0[12;10H[34h[?25h[?25l[30;114H9 [12;9H[34h[?25h[?25l[30;114H8[12;8H[34h[?25h[?25l[30;114H7[12;7H[34h[?25h[?25l[30;114H6[12;6H[34h[?25h[?25l[30;114H5[12;5H[34h[?25h[?25l[30;114H4[12;4H[34h[?25h[?25l[30;114H5[12;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H12,5[10CAll[12;5H[34h[?25h[?25l[36mf[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;114H6[12;6H[34h[?25h[?25l[36mi[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;114H7[12;7H[34h[?25h[?25l[36ml[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;114H8[12;8H[34h[?25h[?25l[36me[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;114H9[12;9H[34h[?25h[?25l[30;114H10[12;10H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25l[30;115H2[12;12H[34h[?25h[?25l[30;115H1[12;11H[34h[?25h[?25lxsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;115H2[12;12H[34h[?25h[?25lxsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;115H3[12;13H[34h[?25h[?25lsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;128H[K[30;115H2[12;12H[34h[?25h[?25lsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[12;127H[K[30;115H1[12;11H[34h[?25h[?25lpsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;115H2[12;12H[34h[?25h[?25lasrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;115H3[12;13H[34h[?25h[?25l[13;29r[13;1H[L[1;30r[12;13Htsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavenn[13;1H"[30;111H[K[30;111H12,14[9CAll[12;14H[34h[?25h[?25lhsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavee[13;1Hn"[30;115H5[12;15H[34h[?25h[?25l=src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[13;1Hen"[30;115H6[12;16H[34h[?25h[?25l~src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maa[13;1Hven"[30;115H7[12;17H[34h[?25h[?25l/src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mm[13;1Haven"[30;115H8[12;18H[34h[?25h[?25lmsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user//[13;1Hmaven"[30;115H9[12;19H[34h[?25h[?25lasrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-userr[13;1H/maven"[30;114H20[12;20H[34h[?25h[?25lvsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-usee[13;1Hr/maven"[30;115H1[12;21H[34h[?25h[?25lesrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-uss[13;1Her/maven"[30;115H2[12;22H[34h[?25h[?25lnsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-uu[13;1Hser/maven"[30;115H3[12;23H[34h[?25h[?25l src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2--[13;1Huser/maven"[30;115H4[12;24H[34h[?25h[?25lssrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec22[13;1H-user/maven"[30;115H5[12;25H[34h[?25h[?25ltsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ecc[13;1H2-user/maven"[30;115H6[12;26H[34h[?25h[?25lasrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ee[13;1Hc2-user/maven"[30;115H7[12;27H[34h[?25h[?25lrsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home//[13;1Hec2-user/maven"[30;115H8[12;28H[34h[?25h[?25ltsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/homee[13;1H/ec2-user/maven"[30;115H9[12;29H[34h[?25h[?25lsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home//[13;1Hec2-user/maven"[13;16H[K[30;115H8[12;28H[34h[?25h[?25lsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ee[13;1Hc2-user/maven"[13;15H[K[30;115H7[12;27H[34h[?25h[?25ltsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home//[13;1Hec2-user/maven"[30;115H8[12;28H[34h[?25h[?25lesrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/homee[13;1H/ec2-user/maven"[30;115H9[12;29H[34h[?25h[?25l=src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/homm[13;1He/ec2-user/maven"[30;114H30[12;30H[34h[?25h[?25ldsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/hoo[13;1Hme/ec2-user/maven"[30;115H1[12;31H[34h[?25h[?25lisrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/hh[13;1Home/ec2-user/maven"[30;115H2[12;32H[34h[?25h[?25lrsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="//[13;1Hhome/ec2-user/maven"[30;115H3[12;33H[34h[?25h[?25lesrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest=""[13;1H/home/ec2-user/maven"[30;115H4[12;34H[34h[?25h[?25lcsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest==[13;1H"/home/ec2-user/maven"[30;115H5[12;35H[34h[?25h[?25ltsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" destt[13;1H="/home/ec2-user/maven"[30;115H6[12;36H[34h[?25h[?25losrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dess[13;1Ht="/home/ec2-user/maven"[30;115H7[12;37H[34h[?25h[?25lrsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dee[13;1Hst="/home/ec2-user/maven"[30;115H8[12;38H[34h[?25h[?25lysrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dd[13;1Hest="/home/ec2-user/maven"[30;115H9[12;39H[34h[?25h[?25l src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"  [13;1Hdest="/home/ec2-user/maven"[30;114H40[12;40H[34h[?25h[?25lmsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz""[13;1H dest="/home/ec2-user/maven"[30;115H1[12;41H[34h[?25h[?25losrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gzz[13;1H" dest="/home/ec2-user/maven"[30;115H2[12;42H[34h[?25h[?25ldsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gg[13;1Hz" dest="/home/ec2-user/maven"[30;115H3[12;43H[34h[?25h[?25lesrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar..[13;1Hgz" dest="/home/ec2-user/maven"[30;115H4[12;44H[34h[?25h[?25l=src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tarr[13;1H.gz" dest="/home/ec2-user/maven"[30;115H5[12;45H[34h[?25h[?25l0src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.taa[13;1Hr.gz" dest="/home/ec2-user/maven"[30;115H6[12;46H[34h[?25h[?25l7src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tt[13;1Har.gz" dest="/home/ec2-user/maven"[30;115H7[12;47H[34h[?25h[?25l5src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin..[13;1Htar.gz" dest="/home/ec2-user/maven"[30;115H8[12;48H[34h[?25h[?25l5src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-binn[13;1H.tar.gz" dest="/home/ec2-user/maven"[30;115H9[12;49H[34h[?25h[?25l[12;49H[K[13;1Hsrc="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven"[30;112H3,1 [13;1H[34h[?25hds[30;1H[K[?25l[30;111H13,1[10CAll[13;1H[34h[?25h[?25l[13;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H13,3[10CAll[13;3H[34h[?25h[?25l[30;112H2[12;3H[34h[?25h[?25l[30;112H1[11;3H[34h[?25h[?25l[30;112H0[10;3H[34h[?25h[?25l[30;112H1[11;3H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H11,24[9CAll[11;24H[34h[?25h[?25l[11;23H[K[30;115H3[11;23H[34h[?25h[?25l[11;22H[K[30;115H2[11;22H[34h[?25h[?25l[11;21H[K[30;115H1[11;21H[34h[?25h[?25l[11;20H[K[30;115H0[11;20H[34h[?25h[?25l[11;19H[K[30;114H19[11;19H[34h[?25h[?25l[30;115H8[11;18H[34h[?25h[?25l[11;17H[K[30;115H7[11;17H[34h[?25h[?25l[11;16H[K[30;115H6[11;16H[34h[?25h[?25l[11;15H[K[30;115H5[11;15H[34h[?25h[?25l[11;14H[K[30;115H4[11;14H[34h[?25h[?25l[11;13H[K[30;115H3[11;13H[34h[?25h[?25l[11;12H[K[30;115H2[11;12H[34h[?25h[?25l[11;11H[K[30;115H1[11;11H[34h[?25h[?25lm[30;115H2[11;12H[34h[?25h[?25lk[30;115H3[11;13H[34h[?25h[?25ld[30;115H4[11;14H[34h[?25h[?25li[30;115H5[11;15H[34h[?25h[?25lr[30;115H6[11;16H[34h[?25h[?25l[30;115H7[11;17H[34h[?25h[?25lZ[30;115H8[11;18H[34h[?25h[?25l[11;17H[K[30;115H7[11;17H[34h[?25h[?25l[31m~[0m[30;115H8[11;18H[34h[?25h[?25l~/[30;115H9[11;19H[34h[?25h[?25lm[30;114H20[11;20H[34h[?25h[?25la[30;115H1[11;21H[34h[?25h[?25lv[30;115H2[11;22H[34h[?25h[?25le[30;115H3[11;23H[34h[?25h[?25ln[30;115H4[11;24H[34h[?25h[?25l[30;112H2[12;24H[34h[?25h[?25l[30;112H3[13;24H[34h[?25h[?25l[30;112H4[14;24H[34h[?25h[?25l[30;112H3[13;24H[34h[?25h[?25l[30;112H4[14;24H[34h[?25h[?25l[30;112H3[13;24H[34h[?25h[?25l[30;112H4[14;24H[34h[?25h[30;1H[K[14;23H[?25l[30;111H14,23[9CAll[14;23H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 14L, 591C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[14@p': vi setup.yml[15@l': ansible-playbook[1@a[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "ERROR! file or module does not exist: /home/ec2-user/myrepo/http:/apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m5[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    [0;31mfailed[0m[0;31m=[0m[0;31m1[0m   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 14L, 600C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" -copy=no
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H14,5[10CAll[14;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H14,141[8CAll[15;13H[34h[?25h[?25l[30;116H0[15;12H[34h[?25h[?25l[30;115H39[15;11H[34h[?25h[?25l[30;116H8[15;10H[34h[?25h[?25l[30;116H7[15;9H[34h[?25h[?25l[30;116H6[15;8H[34h[?25h[?25l[30;116H5[15;7H[34h[?25h[?25l[30;116H4[15;6H[34h[?25h[?25lcopy=no[15;12H[K[30;116H3[15;5H[34h[?25h[30;1H[K[15;4H[?25l[30;111H14,132[8CAll[15;4H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 14L, 599C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [14@ansible-playbook[C[C[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m6[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ../maven/
+total 4
+drwxrwxr-x 6 ec2-user ec2-user 4096 Aug  8 13:05 [0m[01;34mapache-maven-3.3.9[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ../maven/apache-maven-3.3.9/
+total 44
+drwxr-xr-x 3 ec2-user ec2-user  4096 Nov 10  2015 [0m[01;34mconf[0m
+-rw-r--r-- 1 ec2-user ec2-user  2541 Nov 10  2015 README.txt
+-rw-r--r-- 1 ec2-user ec2-user   182 Nov 10  2015 NOTICE
+-rw-r--r-- 1 ec2-user ec2-user 19335 Nov 10  2015 LICENSE
+drwxrwxr-x 2 ec2-user ec2-user  4096 Aug  8 13:05 [01;34mboot[0m
+drwxr-xr-x 3 ec2-user ec2-user  4096 Aug  8 13:05 [01;34mlib[0m
+drwxrwxr-x 2 ec2-user ec2-user  4096 Aug  8 13:05 [01;34mbin[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ../maven/apache-maven-3.3.9/[Kansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m6[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml ls -ltr ../maven/apache-maven-3.3.9/
+total 44
+drwxr-xr-x 3 ec2-user ec2-user  4096 Nov 10  2015 [0m[01;34mconf[0m
+-rw-r--r-- 1 ec2-user ec2-user  2541 Nov 10  2015 README.txt
+-rw-r--r-- 1 ec2-user ec2-user   182 Nov 10  2015 NOTICE
+drwxr-xr-x 3 ec2-user ec2-user  4096 Nov 10  2015 [01;34mlib[0m
+-rw-r--r-- 1 ec2-user ec2-user 19335 Nov 10  2015 LICENSE
+drwxrwxr-x 2 ec2-user ec2-user  4096 Aug  8 13:07 [01;34mboot[0m
+drwxrwxr-x 2 ec2-user ec2-user  4096 Aug  8 13:07 [01;34mbin[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ../maven/apache-maven-3.3.9/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+total 4
+drwxrwxr-x 6 ec2-user ec2-user 4096 Aug  8 13:07 [0m[01;34mapache-maven-3.3.9[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi cre[K[K[Ksetup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 14L, 599C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H14,5[10CAll[14;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H14,140[8CAll[15;12H[34h[?25h[?25l[30;116H1[15;13H[34h[?25h[?25lc[30;116H2[15;14H[34h[?25h[?25lr[30;116H3[15;15H[34h[?25h[?25le[30;116H4[15;16H[34h[?25h[?25la[30;116H5[15;17H[34h[?25h[?25lt[30;116H6[15;18H[34h[?25h[?25le[30;116H7[15;19H[34h[?25h[?25ls[30;116H8[15;20H[34h[?25h[?25l=[30;116H9[15;21H[34h[?25h[?25lZ[30;115H50[15;22H[34h[?25h[?25l[15;21H[K[30;115H49[15;21H[34h[?25h[?25l~[30;115H50[15;22H[34h[?25h[?25l/[30;116H1[15;23H[34h[?25h[?25lm[30;116H2[15;24H[34h[?25h[?25la[30;116H3[15;25H[34h[?25h[?25lv[30;116H4[15;26H[34h[?25h[?25le[30;116H5[15;27H[34h[?25h[?25ln[30;116H6[15;28H[34h[?25h[?25l/[30;116H7[15;29H[34h[?25h[30;1H[K[?25l[30;111H14,156[8CAll[15;28H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 14L, 616C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi /[K../m
+mati/   maven/  myrepo/ 
+[ec2-user@ip-172-31-3-118 myrepo]$ vi ../maven/apache-maven-3.3.9/README.txt q
+2 files to edit
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"../maven/apache-maven-3.3.9/README.txt" 79L, 2541C[2;27HApache Maven
+
+  What is it?
+  -----------
+
+  Maven is a software project management and comprehension tool. Based on
+  the concept of a Project Object Model (POM), Maven can manage a project's
+  build, reporting and documentation from a central piece of information.
+
+  Documentation
+  -------------
+
+  The most up-to-date documentation can be found at http://maven.apache.org/.
+
+  Release Notes
+  -------------
+
+  The full list of changes can be found at http://maven.apache.org/release-notes.html.
+
+  System Requirements
+  -------------------
+
+  JDK:
+    1.7 or above (this is to execute Maven - it still allows you to build against 1.3
+    and prior JDK's).
+  Memory:
+    No minimum requirement.
+  Disk:[30;111H1,0-1[9CTop[1;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[1m[37m[41mE173: 1 more file to edit[0m[85C1,0-1[9CTop[1;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq![?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 14L, 616C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H14,5[10CAll[14;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H14,157[8CAll[15;29H[34h[?25h[?25lapache-maven-3.3.9/README.txt[30;115H86[15;58H[34h[?25h[30;1H[K[?25l[30;111H14,185[8CAll[15;57H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 14L, 645C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ rm -rf /opt/[K[K[K[Khome/ec2-user/maven/
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ rm -rf /home/ec2-user/maven/[15Pvi setup.yml ../maven/apache-maven-3.3.9/README.txt q[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csetup.yml [Kls -ltr ../maven/apache-maven-3.3.9/[9Pansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m6[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;32mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m5[0m    changed=0    unreachable=0    failed=0   
+
 ]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ 
