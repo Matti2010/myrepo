@@ -12,3 +12,9 @@
     file: path=~/maven state=directory mode=0755
   - name: install maven
     unarchive: src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  - name: set maven env
+    lineinfile: dest=~/.bash_profile state=present line="export M2_HOME=~/maven/apache-maven-3.3.9"
+  - name: set maven env
+    lineinfile: dest=~/.bash_profile state=present line="export M2=${M2_HOME}/bin"
+  - name: set maven env
+    lineinfile: dest=~/.bash_profile state=present line="export PATH=$M2:$PATH"

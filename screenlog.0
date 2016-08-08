@@ -919,4 +919,621 @@ TASK [install maven] ***********************************************************
 PLAY RECAP *********************************************************************
 [0;32mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m5[0m    changed=0    unreachable=0    failed=0   
 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[28@a': ansible-playbook setup.yml[17Pd': git add .[11@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[Cc': rm -rf /home/ec2-user/maven/o': git commit -m "2ed version"[1@m[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C
+[master c6f869f] 2ed version
+ Committer: EC2 Default User <ec2-user@ip-172-31-3-118.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 656 insertions(+), 2 deletions(-)
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[28@p': ansible-playbook setup.yml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pu': git push[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[9@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 4, done.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 12.25 KiB | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Matti2010/myrepo.git
+   440d3f6..c6f869f  master -> master
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 14L, 645C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H14,5[10CAll[14;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H14,186[8CAll[15;58H[34h[?25h[?25l[16;1H[K[30;112H5,1  [16;1H[34h[?25h[?25l[30;114H2[16;2H[34h[?25h[?25l[30;114H3[16;3H[34h[?25h[?25l-[30;114H4[16;4H[34h[?25h[?25l[33m- [0m[30;114H5[16;5H[34h[?25h[?25ln[30;114H6[16;6H[34h[?25h[?25la[30;114H7[16;7H[34h[?25h[?25lm[30;114H8[16;8H[34h[?25h[?25le[30;114H9[16;9H[34h[?25h[?25l[36mname[0m[35m:[0m[30;114H10[16;10H[34h[?25h[?25l[30;115H1[16;11H[34h[?25h[?25ls[30;115H2[16;12H[34h[?25h[?25le[30;115H3[16;13H[34h[?25h[?25lt[30;115H4[16;14H[34h[?25h[?25l[30;115H5[16;15H[34h[?25h[?25lm[30;115H6[16;16H[34h[?25h[?25la[30;115H7[16;17H[34h[?25h[?25lv[30;115H8[16;18H[34h[?25h[?25le[30;115H9[16;19H[34h[?25h[?25ln[30;114H20[16;20H[34h[?25h[?25l[30;115H1[16;21H[34h[?25h[?25le[30;115H2[16;22H[34h[?25h[?25ln[30;115H3[16;23H[34h[?25h[?25lt[30;115H4[16;24H[34h[?25h[?25l[16;23H[K[30;115H3[16;23H[34h[?25h[?25lv[30;115H4[16;24H[34h[?25h[?25l[17;1H[K[30;112H6,1 [17;1H[34h[?25h[?25l[30;114H9[17;9H[34h[?25h[?25l[30;114H8[17;8H[34h[?25h[?25l[30;114H7[17;7H[34h[?25h[?25l[30;114H6[17;6H[34h[?25h[?25l[30;114H5[17;5H[34h[?25h[?25l[33m- [0m[36mlineinfile[0m[35m:[0m [31m"dest=/etc/sudoers[0m[30;114H37[17;37H[34h[?25h[?25l[30;115H6[17;36H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H0[17;30H[34h[?25h[?25l[30;114H29[17;29H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[30;115H2[17;22H[34h[?25h[?25l[30;115H1[17;21H[34h[?25h[?25l[30;115H0[17;20H[34h[?25h[?25l[30;114H19[17;19H[34h[?25h[?25l[30;115H8[17;18H[34h[?25h[?25l[30;115H7[17;17H[34h[?25h[?25l[30;115H6[17;16H[34h[?25h[?25l[30;115H5[17;15H[34h[?25h[?25l[30;115H4[17;14H[34h[?25h[?25l[30;115H3[17;13H[34h[?25h[?25l[30;115H2[17;12H[34h[?25h[?25l[30;115H1[17;11H[34h[?25h[?25l[30;115H0[17;10H[34h[?25h[?25l[30;114H9 [17;9H[34h[?25h[?25l[30;114H8[17;8H[34h[?25h[?25l[30;114H7[17;7H[34h[?25h[?25l[36m-lineinfile[0m[35m:[0m [31m"dest=/etc/sudoers[0m[17;36H[K[30;114H6[17;6H[34h[?25h[?25l[36mlineinfile[0m[35m:[0m [31m"dest=/etc/sudoers[0m[17;35H[K[30;114H5[17;5H[34h[?25h[?25l[30;114H6[17;6H[34h[?25h[?25l[30;114H7[17;7H[34h[?25h[?25l[30;114H8[17;8H[34h[?25h[?25l[30;114H9[17;9H[34h[?25h[?25l[30;114H10[17;10H[34h[?25h[?25l[30;115H1[17;11H[34h[?25h[?25l[30;115H2[17;12H[34h[?25h[?25l[30;115H3[17;13H[34h[?25h[?25l[30;115H4[17;14H[34h[?25h[?25l[30;115H5[17;15H[34h[?25h[?25l[30;115H6[17;16H[34h[?25h[?25l[30;115H7[17;17H[34h[?25h[?25l[30;115H8[17;18H[34h[?25h[?25l[30;115H9[17;19H[34h[?25h[?25l[30;114H20[17;20H[34h[?25h[?25l[30;115H1[17;21H[34h[?25h[?25l[30;115H2[17;22H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H9[17;29H[34h[?25h[?25l[30;114H30[17;30H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[17;34H[K[30;115H4[17;34H[34h[?25h[?25l[17;33H[K[30;115H3[17;33H[34h[?25h[?25l[17;32H[K[30;115H2[17;32H[34h[?25h[?25l[17;31H[K[30;115H1[17;31H[34h[?25h[?25l[17;30H[K[30;115H0[17;30H[34h[?25h[?25l[17;29H[K[30;114H29[17;29H[34h[?25h[?25l[17;28H[K[30;115H8[17;28H[34h[?25h[?25l[17;27H[K[30;115H7[17;27H[34h[?25h[?25l[17;26H[K[30;115H6[17;26H[34h[?25h[?25l[17;25H[K[30;115H5[17;25H[34h[?25h[?25l[17;24H[K[30;115H4[17;24H[34h[?25h[?25l[17;23H[K[30;115H3[17;23H[34h[?25h[30;1H[K[?25l[30;111H16,22[9CAll[17;22H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 16L, 692C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr [K[Kr[K[K[Ka ~
+[0m[01;34m.[0m   [01;34m.ansible[0m       .bash_logout   .bashrc  .gitconfig  [01;34m.ssh[0m      [01;34mmati[0m   [01;34mmyrepo[0m
+[01;34m..[0m  .bash_history  .bash_profile  [01;34m.cache[0m   [01;34m.pki[0m        .viminfo  [01;34mmaven[0m  [01;34mpetclinic[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -a ~vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 16L, 692C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m [31m"dest=[0m
+[1m[34m~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H16,5[10CAll[17;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H16,23[9CAll[17;23H[34h[?25h[?25l[31m.bash_profile[0m[30;114H36[17;36H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H0[17;30H[34h[?25h[?25l[30;114H29[17;29H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[31m~.bash_profile[0m[30;115H4[17;24H[34h[?25h[?25l[31m/.bash_profile[0m[30;115H5[17;25H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H9[17;29H[34h[?25h[?25l[30;114H30[17;30H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H6[17;36H[34h[?25h[?25l[30;115H7[17;37H[34h[?25h[?25l[30;115H8[17;38H[34h[?25h[?25l[30;115H7[17;37H[34h[?25h[?25l[30;115H6[17;36H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H0[17;30H[34h[?25h[?25l[30;114H29[17;29H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[30;115H2[17;22H[34h[?25h[?25l[30;115H1[17;21H[34h[?25h[?25l[30;115H0[17;20H[34h[?25h[?25l[30;114H19[17;19H[34h[?25h[?25l[30;115H8[17;18H[34h[?25h[?25ldest=~/.bash_profile[17;37H[K[30;115H7[17;17H[34h[?25h[?25l[30;115H8[17;18H[34h[?25h[?25l[30;115H9[17;19H[34h[?25h[?25l[30;114H20[17;20H[34h[?25h[?25l[30;115H1[17;21H[34h[?25h[?25l[30;115H2[17;22H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H9[17;29H[34h[?25h[?25l[30;114H30[17;30H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H6[17;36H[34h[?25h[?25l[30;115H7[17;37H[34h[?25h[?25l[30;115H8[17;38H[34h[?25h[?25ll[30;115H9[17;39H[34h[?25h[?25li[30;114H40[17;40H[34h[?25h[?25ln[30;115H1[17;41H[34h[?25h[?25le[30;115H2[17;42H[34h[?25h[?25l=[30;115H3[17;43H[34h[?25h[?25l"[30;115H4[17;44H[34h[?25h[?25l[30;115H3[17;43H[34h[?25h[?25l[30;115H2[17;42H[34h[?25h[?25l[30;115H1[17;41H[34h[?25h[?25l[30;115H0[17;40H[34h[?25h[?25l[30;114H39[17;39H[34h[?25h[?25l[30;115H8[17;38H[34h[?25h[?25lstate=presentline="[30;114H51[17;51H[34h[?25h[?25l line="[30;115H2[17;52H[34h[?25h[?25l[30;115H3[17;53H[34h[?25h[?25l[30;115H4[17;54H[34h[?25h[?25l[30;115H5[17;55H[34h[?25h[?25l[30;115H6[17;56H[34h[?25h[?25l[30;115H7[17;57H[34h[?25h[?25l[30;115H8[17;58H[34h[?25h[?25lM2_HOME=root directory of maven[30;114H89[17;89H[34h[?25h[?25l[17;88H[K[30;115H8[17;88H[34h[?25h[?25l[17;87H[K[30;115H7[17;87H[34h[?25h[?25l[17;86H[K[30;115H6[17;86H[34h[?25h[?25l[17;85H[K[30;115H5[17;85H[34h[?25h[?25l[17;84H[K[30;115H4[17;84H[34h[?25h[?25l[30;115H3[17;83H[34h[?25h[?25l[17;82H[K[30;115H2[17;82H[34h[?25h[?25l[17;81H[K[30;115H1[17;81H[34h[?25h[?25l[30;115H0[17;80H[34h[?25h[?25l[17;79H[K[30;114H79[17;79H[34h[?25h[?25l[17;78H[K[30;115H8[17;78H[34h[?25h[?25l[17;77H[K[30;115H7[17;77H[34h[?25h[?25l[17;76H[K[30;115H6[17;76H[34h[?25h[?25l[17;75H[K[30;115H5[17;75H[34h[?25h[?25l[17;74H[K[30;115H4[17;74H[34h[?25h[?25l[17;73H[K[30;115H3[17;73H[34h[?25h[?25l[17;72H[K[30;115H2[17;72H[34h[?25h[?25l[17;71H[K[30;115H1[17;71H[34h[?25h[?25l[30;115H0[17;70H[34h[?25h[?25l[17;69H[K[30;114H69[17;69H[34h[?25h[?25l[17;68H[K[30;115H8[17;68H[34h[?25h[?25l[17;67H[K[30;115H7[17;67H[34h[?25h[?25l[17;66H[K[30;115H6[17;66H[34h[?25h[?25l/maven[30;114H72[17;72H[34h[?25h[?25l/[30;115H3[17;73H[34h[?25h[30;1H[K[?25l[30;111H16,72[9CAll[17;72H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 16L, 742C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ~/
+total 16
+drwxrwxr-x 2 ec2-user ec2-user 4096 Aug  8 10:18 [0m[01;34mmati[0m
+drwxrwxr-x 5 ec2-user ec2-user 4096 Aug  8 11:15 [01;34mpetclinic[0m
+drwxr-xr-x 3 ec2-user ec2-user 4096 Aug  8 13:12 [01;34mmaven[0m
+drwxrwxr-x 3 ec2-user ec2-user 4096 Aug  8 13:24 [01;34mmyrepo[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ~/maven/
+total 4
+drwxrwxr-x 6 ec2-user ec2-user 4096 Aug  8 13:12 [0m[01;34mapache-maven-3.3.9[0m
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ls -ltr ~/maven/[Kvi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 16L, 742C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2_HOME=/maven/
+[1m[34m~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H16,5[10CAll[17;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H16,73[9CAll[17;73H[34h[?25h[?25lapache-maven-3.3.9[30;114H91[17;91H[34h[?25h[?25l"[30;115H2[17;92H[34h[?25h[30;1H[K[17;91H[?25l[30;111H16,91[9CAll[17;91H[34h[?25h[?25l
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2_HOME=/maven/apache-maven-3.3.9"[18;92H[K[30;112H7,5 [18;5H[34h[?25h[?25l
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2_HOME=/maven/apache-maven-3.3.9"[19;92H[K[30;112H8[19;5H[34h[?25h[?25l[30;112H7[18;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H17,92[9CAll[18;92H[34h[?25h[?25l[30;115H1[18;91H[34h[?25h[?25l/"[30;115H2[18;92H[34h[?25h[?25lb"[30;115H3[18;93H[34h[?25h[?25li"[30;115H4[18;94H[34h[?25h[?25ln"[30;115H5[18;95H[34h[?25h[?25l[30;115H4[18;94H[34h[?25h[?25l[30;115H3[18;93H[34h[?25h[?25l[30;115H2[18;92H[34h[?25h[?25l[30;115H1[18;91H[34h[?25h[?25l[30;115H0[18;90H[34h[?25h[?25l[30;114H89[18;89H[34h[?25h[?25l[30;115H8[18;88H[34h[?25h[?25l[30;115H7[18;87H[34h[?25h[?25l[30;115H6[18;86H[34h[?25h[?25l[30;115H5[18;85H[34h[?25h[?25l[30;115H4[18;84H[34h[?25h[?25l[30;115H3[18;83H[34h[?25h[?25l[30;115H2[18;82H[34h[?25h[?25l[30;115H1[18;81H[34h[?25h[?25l[30;115H0[18;80H[34h[?25h[?25l[30;114H79[18;79H[34h[?25h[?25l[30;115H8[18;78H[34h[?25h[?25l[30;115H7[18;77H[34h[?25h[?25l[30;115H6[18;76H[34h[?25h[?25l[30;115H5[18;75H[34h[?25h[?25l[30;115H4[18;74H[34h[?25h[?25l[30;115H3[18;73H[34h[?25h[?25l[30;115H2[18;72H[34h[?25h[?25l[30;115H1[18;71H[34h[?25h[?25l[30;115H0[18;70H[34h[?25h[?25l[30;114H69[18;69H[34h[?25h[?25l[30;115H8[18;68H[34h[?25h[?25l[30;115H7[18;67H[34h[?25h[?25l[30;115H6[18;66H[34h[?25h[?25l[30;115H5[18;65H[34h[?25h[?25l=/maven/apache-maven-3.3.9/bin"[18;95H[K[30;115H4[18;64H[34h[?25h[?25l=/maven/apache-maven-3.3.9/bin"[18;94H[K[30;115H3[18;63H[34h[?25h[?25l=/maven/apache-maven-3.3.9/bin"[18;93H[K[30;115H2[18;62H[34h[?25h[?25l=/maven/apache-maven-3.3.9/bin"[18;92H[K[30;115H1[18;61H[34h[?25h[?25l=/maven/apache-maven-3.3.9/bin"[18;91H[K[30;115H0[18;60H[34h[?25h[?25l[30;112H8[19;60H[34h[?25h[?25l[30;115H1[19;61H[34h[?25h[?25l[30;115H2[19;62H[34h[?25h[?25l[30;115H3[19;63H[34h[?25h[?25l[30;115H4[19;64H[34h[?25h[?25l[30;115H5[19;65H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;91H[K[30;115H4[19;64H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;90H[K[30;115H3[19;63H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;89H[K[30;115H2[19;62H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;88H[K[30;115H1[19;61H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;87H[K[30;115H0[19;60H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;86H[K[30;114H59[19;59H[34h[?25h[?25l=/maven/apache-maven-3.3.9"[19;85H[K[30;115H8[19;58H[34h[?25h[?25lP=/maven/apache-maven-3.3.9"[30;115H9[19;59H[34h[?25h[?25lA=/maven/apache-maven-3.3.9"[30;114H60[19;60H[34h[?25h[?25lT=/maven/apache-maven-3.3.9"[30;115H1[19;61H[34h[?25h[?25lH=/maven/apache-maven-3.3.9"[30;115H2[19;62H[34h[?25h[?25l[30;115H3[19;63H[34h[?25h[?25lmaven/apache-maven-3.3.9"[19;88H[K[19;63H[34h[?25h[?25laven/apache-maven-3.3.9"[19;87H[K[19;63H[34h[?25h[?25lven/apache-maven-3.3.9"[19;86H[K[19;63H[34h[?25h[?25len/apache-maven-3.3.9"[19;85H[K[19;63H[34h[?25h[?25ln/apache-maven-3.3.9"[19;84H[K[19;63H[34h[?25h[?25l/apache-maven-3.3.9"[19;83H[K[19;63H[34h[?25h[?25lapache-maven-3.3.9"[19;82H[K[19;63H[34h[?25h[?25lpache-maven-3.3.9"[19;81H[K[19;63H[34h[?25h[?25lache-maven-3.3.9"[19;80H[K[19;63H[34h[?25h[?25lche-maven-3.3.9"[19;79H[K[19;63H[34h[?25h[?25lhe-maven-3.3.9"[19;78H[K[19;63H[34h[?25h[?25le-maven-3.3.9"[19;77H[K[19;63H[34h[?25h[?25l-maven-3.3.9"[19;76H[K[19;63H[34h[?25h[?25lmaven-3.3.9"[19;75H[K[19;63H[34h[?25h[?25laven-3.3.9"[19;74H[K[19;63H[34h[?25h[?25lven-3.3.9"[19;73H[K[19;63H[34h[?25h[?25len-3.3.9"[19;72H[K[19;63H[34h[?25h[?25ln-3.3.9"[19;71H[K[19;63H[34h[?25h[?25l-3.3.9"[19;70H[K[19;63H[34h[?25h[?25l3.3.9"[19;69H[K[19;63H[34h[?25h[?25l.3.9"[19;68H[K[19;63H[34h[?25h[?25l3.9"[19;67H[K[19;63H[34h[?25h[?25l.9"[19;66H[K[19;63H[34h[?25h[?25l9"[19;65H[K[19;63H[34h[?25h[?25l"[19;64H[K[19;63H[34h[?25h[?25li"[30;115H4[19;64H[34h[?25h[?25l"[19;64H[K[30;115H3[19;63H[34h[?25h[?25l$"[30;115H4[19;64H[34h[?25h[?25lM"[30;115H5[19;65H[34h[?25h[?25l2"[30;115H6[19;66H[34h[?25h[?25l:"[30;115H7[19;67H[34h[?25h[?25l&"[30;115H8[19;68H[34h[?25h[?25lP"[30;115H9[19;69H[34h[?25h[?25lA"[30;114H70[19;70H[34h[?25h[?25lT"[30;115H1[19;71H[34h[?25h[?25lH"[30;115H2[19;72H[34h[?25h[?25l[30;115H1[19;71H[34h[?25h[?25l[30;115H0[19;70H[34h[?25h[?25l[30;114H69[19;69H[34h[?25h[?25l[30;115H8[19;68H[34h[?25h[?25lPATH"[19;72H[K[30;115H7[19;67H[34h[?25h[?25l$PATH"[30;115H8[19;68H[34h[?25h[?25l[30;112H7[18;68H[34h[?25h[?25l[30;112H6[17;68H[34h[?25h[?25l[30;115H7[17;67H[34h[?25h[?25l[30;112H7[18;67H[34h[?25h[?25l[30;115H6[18;66H[34h[?25h[?25l[30;115H5[18;65H[34h[?25h[?25l[30;115H4[18;64H[34h[?25h[?25l[30;115H3[18;63H[34h[?25h[?25l[30;115H2[18;62H[34h[?25h[?25l[30;115H1[18;61H[34h[?25h[?25lx/maven/apache-maven-3.3.9/bin"[30;115H2[18;62H[34h[?25h[?25lx/maven/apache-maven-3.3.9/bin"[30;115H3[18;63H[34h[?25h[30;1H[K[18;62H[?25l[30;111H17,62[9CAll[18;62H[34h[?25h[?25l/maven/apache-maven-3.3.9/bin"[18;92H[K[18;62H[34h[?25h[?25lmaven/apache-maven-3.3.9/bin"[18;91H[K[18;62H[34h[?25h[?25laven/apache-maven-3.3.9/bin"[18;90H[K[18;62H[34h[?25h[?25lven/apache-maven-3.3.9/bin"[18;89H[K[18;62H[34h[?25h[?25len/apache-maven-3.3.9/bin"[18;88H[K[18;62H[34h[?25h[?25ln/apache-maven-3.3.9/bin"[18;87H[K[18;62H[34h[?25h[?25l[30;115H1[18;61H[34h[?25h[?25ln/apache-maven-3.3.9/bin"[18;86H[K[18;61H[34h[?25h[?25l/apache-maven-3.3.9/bin"[18;85H[K[18;61H[34h[?25h[?25lapache-maven-3.3.9/bin"[18;84H[K[18;61H[34h[?25h[?25lpache-maven-3.3.9/bin"[18;83H[K[18;61H[34h[?25h[?25lache-maven-3.3.9/bin"[18;82H[K[18;61H[34h[?25h[?25lche-maven-3.3.9/bin"[18;81H[K[18;61H[34h[?25h[?25lhe-maven-3.3.9/bin"[18;80H[K[18;61H[34h[?25h[?25le-maven-3.3.9/bin"[18;79H[K[18;61H[34h[?25h[?25l-maven-3.3.9/bin"[18;78H[K[18;61H[34h[?25h[?25lmaven-3.3.9/bin"[18;77H[K[18;61H[34h[?25h[?25laven-3.3.9/bin"[18;76H[K[18;61H[34h[?25h[?25lven-3.3.9/bin"[18;75H[K[18;61H[34h[?25h[?25len-3.3.9/bin"[18;74H[K[18;61H[34h[?25h[?25ln-3.3.9/bin"[18;73H[K[18;61H[34h[?25h[?25l-3.3.9/bin"[18;72H[K[18;61H[34h[?25h[?25l3.3.9/bin"[18;71H[K[18;61H[34h[?25h[?25l.3.9/bin"[18;70H[K[18;61H[34h[?25h[?25l3.9/bin"[18;69H[K[18;61H[34h[?25h[?25l.9/bin"[18;68H[K[18;61H[34h[?25h[?25l9/bin"[18;67H[K[18;61H[34h[?25h[?25l/bin"[18;66H[K[18;61H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H17,61[9CAll[18;61H[34h[?25h[?25l${M2_HOME}/bin"[18;62H[46m{[7C}[0m[30;114H7[18;71H[34h[?25h[?25l[18;62H{[7C}[30;115H2[18;72H[34h[?25h[?25l[30;115H3[18;73H[34h[?25h[?25l[30;115H4[18;74H[34h[?25h[?25l[30;115H3[18;73H[34h[?25h[30;1H[K[18;72H[?25l[30;111H17,72[9CAll[18;72H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 18L, 910C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[14@p': vi setup.yml[15@l': ansible-playbook[1@a[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+[1;35m [WARNING]: While constructing a mapping from /home/ec2-user/myrepo/setup.yml, line 15, column 5, found a duplicate dict key
+(lineinfile).  Using last defined value only.
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m6[0m    [0;33mchanged[0m[0;33m=[0m[0;33m1[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cat Z./[K[K[K~./cat[K[K[K[K[K/.bash_profile 
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
+PATH=$M2:$PATH
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cat ~/.bash_profile [7@ansible-playbook setup.yml[C[14Pvi[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 18L, 910C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2_HOME=/maven/apache-maven-3.3.9"
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2=${M2_HOME}/bin"
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="PATH=$M2:$PATH"
+[1m[34m~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H17,5[10CAll[18;5H[34h[?25h[?25l[30;112H6[17;5H[34h[?25h[?25l[30;112H5[16;5H[34h[?25h[?25l[30;112H6[17;5H[34h[?25h[?25l[30;112H7[18;5H[34h[?25h[?25l[19;29r[19;1H[L[1;30r[19;3H[33m- [0m[36mname[0m[35m:[0m set maven env[30;1H[K[30;111H18,3[10CAll[19;3H[34h[?25h[?25l[30;112H7[18;3H[34h[?25h[?25l[30;112H6[17;3H[34h[?25h[?25l[18;29r[18;1H[L[1;30r[18;3H[33m- [0m[36mname[0m[35m:[0m set maven env[30;111H[K[30;111H17,3[10CAll[18;3H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 20L, 958C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [7@cat ~/.bash_profile[C[7@ansible-playbook setup.yml[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C[7@cat ~/.bash_profile[C
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
+PATH=$M2:$PATH
+M2_HOME=/maven/apache-maven-3.3.9
+M2=${M2_HOME}/bin
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ cat ~/.bash_profile [7@ansible-playbook setup.yml[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;32mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m8[0m    changed=0    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;32mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m8[0m    changed=0    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ source [K[K[K[K[K[K[Kmvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ source Z[K~./[K[K/.bash_profile 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mnv[K[Knv[K[Kvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ su - u
+su: user u does not exist
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ su - u[3Pmvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 20L, 958C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2_HOME=/maven/apache-maven-3.3.9"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="M2=${M2_HOME}/bin"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="PATH=$M2:$PATH"
+[1m[34m~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H17,3[10CAll[18;3H[34h[?25h[?25l[30;112H8[19;3H[34h[?25h[?25l[30;112H7[18;3H[34h[?25h[?25l[30;114H4[18;4H[34h[?25h[?25l[30;114H5[18;5H[34h[?25h[?25l[30;112H6[17;5H[34h[?25h[?25l[30;114H6[17;6H[34h[?25h[?25l[30;114H7[17;7H[34h[?25h[?25l[30;114H8[17;8H[34h[?25h[?25l[30;114H9[17;9H[34h[?25h[?25l[30;114H10[17;10H[34h[?25h[?25l[30;115H1[17;11H[34h[?25h[?25l[30;115H2[17;12H[34h[?25h[?25l[30;115H3[17;13H[34h[?25h[?25l[30;115H4[17;14H[34h[?25h[?25l[30;115H5[17;15H[34h[?25h[?25l[30;115H6[17;16H[34h[?25h[?25l[30;115H7[17;17H[34h[?25h[?25l[30;115H8[17;18H[34h[?25h[?25l[30;115H9[17;19H[34h[?25h[?25l[30;114H20[17;20H[34h[?25h[?25l[30;115H1[17;21H[34h[?25h[?25l[30;115H2[17;22H[34h[?25h[?25l[30;115H3[17;23H[34h[?25h[?25l[30;115H4[17;24H[34h[?25h[?25l[30;115H5[17;25H[34h[?25h[?25l[30;115H6[17;26H[34h[?25h[?25l[30;115H7[17;27H[34h[?25h[?25l[30;115H8[17;28H[34h[?25h[?25l[30;115H9[17;29H[34h[?25h[?25l[30;114H30[17;30H[34h[?25h[?25l[30;115H1[17;31H[34h[?25h[?25l[30;115H2[17;32H[34h[?25h[?25l[30;115H3[17;33H[34h[?25h[?25l[30;115H4[17;34H[34h[?25h[?25l[30;115H5[17;35H[34h[?25h[?25l[30;115H6[17;36H[34h[?25h[?25l[30;115H7[17;37H[34h[?25h[?25l[30;115H8[17;38H[34h[?25h[?25l[30;115H9[17;39H[34h[?25h[?25l[30;114H40[17;40H[34h[?25h[?25l[30;115H1[17;41H[34h[?25h[?25l[30;115H2[17;42H[34h[?25h[?25l[30;115H3[17;43H[34h[?25h[?25l[30;115H4[17;44H[34h[?25h[?25l[30;115H5[17;45H[34h[?25h[?25l[30;115H6[17;46H[34h[?25h[?25l[30;115H7[17;47H[34h[?25h[?25l[30;115H8[17;48H[34h[?25h[?25l[30;115H9[17;49H[34h[?25h[?25l[30;114H50[17;50H[34h[?25h[?25l[30;115H1[17;51H[34h[?25h[?25l[30;115H2[17;52H[34h[?25h[?25l[30;115H3[17;53H[34h[?25h[?25l[30;115H4[17;54H[34h[?25h[?25l[30;115H5[17;55H[34h[?25h[?25l[30;115H6[17;56H[34h[?25h[?25l[30;115H7[17;57H[34h[?25h[?25l[30;115H8[17;58H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H16,58[9CAll[17;58H[34h[?25h[?25leM2_HOME=/maven/apache-maven-3.3.9"[30;115H9[17;59H[34h[?25h[?25lxM2_HOME=/maven/apache-maven-3.3.9"[30;114H60[17;60H[34h[?25h[?25lpM2_HOME=/maven/apache-maven-3.3.9"[30;115H1[17;61H[34h[?25h[?25loM2_HOME=/maven/apache-maven-3.3.9"[30;115H2[17;62H[34h[?25h[?25lrM2_HOME=/maven/apache-maven-3.3.9"[30;115H3[17;63H[34h[?25h[?25ltM2_HOME=/maven/apache-maven-3.3.9"[30;115H4[17;64H[34h[?25h[?25l M2_HOME=/maven/apache-maven-3.3.9"[30;115H5[17;65H[34h[?25h[?25l[30;112H7,24[18;24H[34h[?25h[?25l[30;115H3[18;23H[34h[?25h[?25l[30;112H8[19;23H[34h[?25h[?25l[30;115H4[19;24H[34h[?25h[30;1H[K[19;23H[?25l[30;111H18,23[9CAll[19;23H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;111H[K[30;111H18,76[9CAll[19;76H[34h[?25h[?25l[30;115H5[19;75H[34h[?25h[?25l[30;115H4[19;74H[34h[?25h[?25l[30;115H3[19;73H[34h[?25h[?25l[30;115H2[19;72H[34h[?25h[?25l[19;62H[46m{[7C}[0m[30;115H1[19;71H[34h[?25h[?25l[30;115H0[19;70H[34h[?25h[?25l[19;62H{[7C}[30;114H69[19;69H[34h[?25h[?25l[30;115H8[19;68H[34h[?25h[?25l[30;115H7[19;67H[34h[?25h[?25l[30;115H6[19;66H[34h[?25h[?25l[30;115H5[19;65H[34h[?25h[?25l[30;115H4[19;64H[34h[?25h[?25l[46m{[7C}[0m[30;115H3[19;63H[34h[?25h[?25l[30;115H2[19;62H[34h[?25h[?25l{[7C}[30;115H1[19;61H[34h[?25h[?25l[30;115H0[19;60H[34h[?25h[?25l[30;114H59[19;59H[34h[?25h[?25l[30;115H8[19;58H[34h[?25h[?25leM2=${M2_HOME}/bin"[30;115H9[19;59H[34h[?25h[?25lxM2=${M2_HOME}/bin"[30;114H60[19;60H[34h[?25h[?25lpM2=${M2_HOME}/bin"[30;115H1[19;61H[34h[?25h[?25loM2=${M2_HOME}/bin"[30;115H2[19;62H[34h[?25h[?25lrM2=${M2_HOME}/bin"[30;115H3[19;63H[34h[?25h[?25ltM2=${M2_HOME}/bin"[30;115H4[19;64H[34h[?25h[?25l[30;112H9,2[20;24H[34h[?25h[?25l[30;112H8,6[19;64H[34h[?25h[?25l M2=${M2_HOME}/bin"[30;115H5[19;65H[34h[?25h[?25l[30;112H9,24[20;24H[34h[?25h[?25l[30;115H3[20;23H[34h[?25h[?25l[30;115H2[20;22H[34h[?25h[?25l[30;111H20[21;22H[34h[?25h[?25l[30;115H3[21;23H[34h[?25h[?25l[30;115H4[21;24H[34h[?25h[?25l[30;114H73[21;73H[34h[?25h[?25l[30;115H2[21;72H[34h[?25h[?25l[30;115H1[21;71H[34h[?25h[?25l[30;115H0[21;70H[34h[?25h[?25l[30;114H69[21;69H[34h[?25h[?25l[30;115H8[21;68H[34h[?25h[?25l[30;115H7[21;67H[34h[?25h[?25l[30;115H6[21;66H[34h[?25h[?25l[30;115H5[21;65H[34h[?25h[?25l[30;115H4[21;64H[34h[?25h[?25l[30;115H3[21;63H[34h[?25h[?25l[30;115H2[21;62H[34h[?25h[?25l[30;115H1[21;61H[34h[?25h[?25l[30;115H0[21;60H[34h[?25h[?25l[30;114H59[21;59H[34h[?25h[?25l[30;115H8[21;58H[34h[?25h[?25lePATH=$M2:$PATH"[30;115H9[21;59H[34h[?25h[?25lxPATH=$M2:$PATH"[30;114H60[21;60H[34h[?25h[?25lpPATH=$M2:$PATH"[30;115H1[21;61H[34h[?25h[?25loPATH=$M2:$PATH"[30;115H2[21;62H[34h[?25h[?25lrPATH=$M2:$PATH"[30;115H3[21;63H[34h[?25h[?25ltPATH=$M2:$PATH"[30;115H4[21;64H[34h[?25h[?25l PATH=$M2:$PATH"[30;115H5[21;65H[34h[?25h[30;1H[K[21;64H[?25l[30;111H20,64[9CAll[21;64H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"setup.yml" 20L, 979C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi .ba[K[K[K~/.bash_profile 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"~/.bash_profile" 15L, 260C[1;1H[34m# .bash_profile
+
+# Get the aliases and functions[0m
+[33mif [[0m [33m-f[0m ~/.bashrc [33m];[0m [33mthen
+        . [0m~/.bashrc
+[33mfi[0m
+
+[34m# User specific environment and startup programs[0m
+
+[36mPATH[0m=[35m$PATH[0m:[35m$HOME[0m/.local/bin:[35m$HOME[0m/bin
+
+[33mexport[0m[36m PATH
+PATH[0m=[35m$M2[0m:[35m$PATH[0m
+[36mM2_HOME[0m=/maven/apache-maven-3.3.9
+[36mM2[0m=[35m${M2_HOME}[0m/bin
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H1,1[11CAll[1;1H[34h[?25h[?25l[30;111H2,0-1[2;1H[34h[?25h[?25l[30;111H3,1  [3;1H[34h[?25h[?25l[30;111H4[4;1H[34h[?25h[?25l[30;111H5,1-8[5;8H[34h[?25h[?25l[30;111H6,1  [6;1H[34h[?25h[?25l[30;111H7,0-1[7;1H[34h[?25h[?25l[30;111H8,1  [8;1H[34h[?25h[?25l[30;111H9,0-1[9;1H[34h[?25h[?25l[30;111H10,1 [10;1H[34h[?25h[?25l[30;112H1,0-1[11;1H[34h[?25h[?25l[30;112H2,1  [12;1H[34h[?25h[?25l[30;112H3[13;1H[34h[?25h[?25l[13;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;1H[K[30;111H13,1[10CAll[13;1H[34h[?25h[?25l[13;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H13,1[10CAll[13;1H[34h[?25h[?25l[1m[34m~                                                                                                                               [0m[30;112H2[12;1H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"~/.bash_profile" 12L, 193C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi ~/.bash_profile [6Psetup.yml[Cmvn[Ksu - u[3Pmvnsource ~/.bash_profile 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ source ~/.bash_profile [4Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Psetup.yml[Cmvn[Ksu - u[3Pmvnsource ~/.bash_profile mvn[Kansible-playbook setup.yml 
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m3[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi [K[K[Ksu - u
+su: user u does not exist
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ su -u
+su: option requires an argument -- 'u'
+
+Usage:
+ su [options] [-] [USER [arg]...]
+
+Change the effective user id and group id to that of USER.
+A mere - implies -l.   If USER not given, assume root.
+
+Options:
+ -m, -p, --preserve-environment  do not reset environment variables
+ -g, --group <group>             specify the primary group
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  make the shell a login shell
+ -c, --command <command>         pass a single command to the shell with -c
+ --session-command <command>     pass a single command to the shell with -c
+                                 and do not create a new session
+ -f, --fast                      pass -f to the shell (for csh or tcsh)
+ -s, --shell <shell>             run shell if /etc/shells allows it
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see su(1).
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ su -u e2[Kc2-user
+
+Usage:
+ su [options] [-] [USER [arg]...]
+
+Change the effective user id and group id to that of USER.
+A mere - implies -l.   If USER not given, assume root.
+
+Options:
+ -m, -p, --preserve-environment  do not reset environment variables
+ -g, --group <group>             specify the primary group
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  make the shell a login shell
+ -c, --command <command>         pass a single command to the shell with -c
+ --session-command <command>     pass a single command to the shell with -c
+                                 and do not create a new session
+ -f, --fast                      pass -f to the shell (for csh or tcsh)
+ -s, --shell <shell>             run shell if /etc/shells allows it
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see su(1).
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ su -u ec2-user[1Pec2-user[1Pec2-user
+su: invalid option -- 'e'
+
+Usage:
+ su [options] [-] [USER [arg]...]
+
+Change the effective user id and group id to that of USER.
+A mere - implies -l.   If USER not given, assume root.
+
+Options:
+ -m, -p, --preserve-environment  do not reset environment variables
+ -g, --group <group>             specify the primary group
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  make the shell a login shell
+ -c, --command <command>         pass a single command to the shell with -c
+ --session-command <command>     pass a single command to the shell with -c
+                                 and do not create a new session
+ -f, --fast                      pass -f to the shell (for csh or tcsh)
+ -s, --shell <shell>             run shell if /etc/shells allows it
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see su(1).
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[20@v': vi ~/.bash_profile[1@i[C[C[C[11@[ec2-user@ip-172-31-3-118 myrepo]$[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"~/.bash_profile" 15L, 281C[1;1H[34m# .bash_profile
+
+# Get the aliases and functions[0m
+[33mif [[0m [33m-f[0m ~/.bashrc [33m];[0m [33mthen
+        . [0m~/.bashrc
+[33mfi[0m
+
+[34m# User specific environment and startup programs[0m
+
+[36mPATH[0m=[35m$PATH[0m:[35m$HOME[0m/.local/bin:[35m$HOME[0m/bin
+
+[33mexport[0m[36m PATH[0m
+[33mexport[0m[36m M2_HOME=[0m/maven/apache-maven-3.3.9
+[33mexport[0m[36m M2=[0m[35m${M2_HOME}[0m/bin
+[33mexport[0m[36m PATH=[0m[35m$M2[0m:[35m$PATH[0m
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,1[10CAll[12;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ source ^C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[20@s': vi ~/.bash_profile[5@o': source[1@u[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mvn
+bash: mvn: command not found
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mvnsource ~/.bash_profile [4Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"~/.bash_profile" 15L, 281C[1;1H[34m# .bash_profile
+
+# Get the aliases and functions[0m
+[33mif [[0m [33m-f[0m ~/.bashrc [33m];[0m [33mthen
+        . [0m~/.bashrc
+[33mfi[0m
+
+[34m# User specific environment and startup programs[0m
+
+[36mPATH[0m=[35m$PATH[0m:[35m$HOME[0m/.local/bin:[35m$HOME[0m/bin
+
+[33mexport[0m[36m PATH[0m
+[33mexport[0m[36m M2_HOME=[0m/maven/apache-maven-3.3.9
+[33mexport[0m[36m M2=[0m[35m${M2_HOME}[0m/bin
+[33mexport[0m[36m PATH=[0m[35m$M2[0m:[35m$PATH[0m
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,1[10CAll[12;1H[34h[?25h[?25l[30;112H3[13;1H[34h[?25h[?25l[30;114H2[13;2H[34h[?25h[?25l[30;114H3[13;3H[34h[?25h[?25l[30;114H4[13;4H[34h[?25h[?25l[30;114H5[13;5H[34h[?25h[?25l[30;114H6[13;6H[34h[?25h[?25l[30;114H7[13;7H[34h[?25h[?25l[30;114H8[13;8H[34h[?25h[?25l[30;114H9[13;9H[34h[?25h[?25l[30;114H10[13;10H[34h[?25h[?25l[30;115H1[13;11H[34h[?25h[?25l[30;115H2[13;12H[34h[?25h[?25l[30;115H3[13;13H[34h[?25h[?25l[30;115H4[13;14H[34h[?25h[?25l[30;115H5[13;15H[34h[?25h[?25l[30;115H6[13;16H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H13,16[9CAll[13;16H[34h[?25h[?25l~/maven/apache-maven-3.3.9[30;115H7[13;17H[34h[?25h:/[30;1H[K[?25l[30;111H13,16[9CAll[13;16H[34h[?25h[?25l[30;111H[K[30;1H:x[34h[?25h[?25l[30;1H[K[30;111H13,16[9CAll[13;16H[34h[?25h[?25l[30;112H4[14;16H[34h[?25h[?25l[30;112H3[13;16H[34h[?25h[?25l[13;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H13,1[10CAll[13;1H[34h[?25h[?25l[13;29r[29;1H
+[1;30r[29;1H[1m[34m~                                                                                                                               [0m[30;111H[K[30;111H13,1[10CAll[13;1H[34h[?25h[?25l[1m[34m~                                                                                                                               [0m[30;112H2[12;1H[34h[?25h[?25l[30;111H[K[30;1H:[34h[?25hx[?25l"~/.bash_profile" 12L, 193C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ v [Ki setup.yml 
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"setup.yml" 20L, 979C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/mavv[15;1Hen" copy=no creates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2_HOME=/maven/apache-maven-3.3.9"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2=${M2_HOME}/bin"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export PATH=$M2:$PATH"
+[1m[34m~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H20,5[10CAll[21;5H[34h[?25h[?25l[30;111H19[20;5H[34h[?25h[?25l[30;112H8[19;5H[34h[?25h[?25l[30;112H7[18;5H[34h[?25h[?25l[30;112H6[17;5H[34h[?25h[?25l[30;1H[1m-- INSERT --[0m[30;13H[K[30;111H16,99[9CAll[17;99H[34h[?25h[?25l[30;115H8[17;98H[34h[?25h[?25l[30;115H7[17;97H[34h[?25h[?25l[30;115H6[17;96H[34h[?25h[?25l[30;115H5[17;95H[34h[?25h[?25l[30;115H4[17;94H[34h[?25h[?25l[30;115H3[17;93H[34h[?25h[?25l[30;115H2[17;92H[34h[?25h[?25l[30;115H1[17;91H[34h[?25h[?25l[30;115H0[17;90H[34h[?25h[?25l[30;114H89[17;89H[34h[?25h[?25l[30;115H8[17;88H[34h[?25h[?25l[30;115H7[17;87H[34h[?25h[?25l[30;115H6[17;86H[34h[?25h[?25l[30;115H5[17;85H[34h[?25h[?25l[30;115H4[17;84H[34h[?25h[?25l[30;115H3[17;83H[34h[?25h[?25l[30;115H2[17;82H[34h[?25h[?25l[30;115H1[17;81H[34h[?25h[?25l[30;115H0[17;80H[34h[?25h[?25l[30;114H79[17;79H[34h[?25h[?25l[30;115H8[17;78H[34h[?25h[?25l[30;115H7[17;77H[34h[?25h[?25l[30;115H6[17;76H[34h[?25h[?25l[30;115H5[17;75H[34h[?25h[?25l[30;115H4[17;74H[34h[?25h[?25l[30;115H3[17;73H[34h[?25h[?25li/maven/apache-maven-3.3.9"[30;115H4[17;74H[34h[?25h[?25l/maven/apache-maven-3.3.9"[17;99H[K[30;115H3[17;73H[34h[?25h[?25l~/maven/apache-maven-3.3.9"[30;115H4[17;74H[34h[?25h:/[30;1H[K[?25l[30;111H16,73[9CAll[17;73H[34h[?25h[?25l[30;111H[K[30;1H:x[34h[?25h[?25l"setup.yml" 20L, 980C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi setup.yml [6@~/.bash_profile[Cmvn[K^C
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ [13P(reverse-i-search)`':[C[14@p': vi setup.yml[15@l': ansible-playbook[1@a[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-3-118 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m3[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ansible-playbook setup.yml [14Pvi[C[C[C[C[C[C[C[C[C[C[C[6@~/.bash_profile[C
+[?1049h[?1h=[1;30r[34l[34h[?25h[23m[24m[0m[H[J[?25l[30;1H"~/.bash_profile" 15L, 282C[1;1H[34m# .bash_profile
+
+# Get the aliases and functions[0m
+[33mif [[0m [33m-f[0m ~/.bashrc [33m];[0m [33mthen
+        . [0m~/.bashrc
+[33mfi[0m
+
+[34m# User specific environment and startup programs[0m
+
+[36mPATH[0m=[35m$PATH[0m:[35m$HOME[0m/.local/bin:[35m$HOME[0m/bin
+
+[33mexport[0m[36m PATH[0m
+[33mexport[0m[36m M2_HOME=[0m~/maven/apache-maven-3.3.9
+[33mexport[0m[36m M2=[0m[35m${M2_HOME}[0m/bin
+[33mexport[0m[36m PATH=[0m[35m$M2[0m:[35m$PATH[0m
+[1m[34m~                                                                                                                               [17;1H~                                                                                                                               [18;1H~                                                                                                                               [19;1H~                                                                                                                               [20;1H~                                                                                                                               [21;1H~                                                                                                                               [22;1H~                                                                                                                               [23;1H~                                                                                                                               [24;1H~                                                                                                                               [25;1H~                                                                                                                               [26;1H~                                                                                                                               [27;1H~                                                                                                                               [28;1H~                                                                                                                               [29;1H~                                                                                                                               [0m[30;111H12,1[10CAll[12;1H[34h[?25h[?25l[30;1H[K[30;1H:[34h[?25hq[?25l[30;1H[K[30;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ vi ~/.bash_profile [1P[1P[1@c[1@a[1@t
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
+export M2_HOME=~/maven/apache-maven-3.3.9
+export M2=${M2_HOME}/bin
+export PATH=$M2:$PATH
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ source ba[K[K~ba[K[K/ba[K[K[K./bas[K[K[K[K[K/.bash_profile 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ mvn
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.121 s
+[INFO] Finished at: 2016-08-08T13:33:29+00:00
+[INFO] Final Memory: 5M/15M
+[INFO] ------------------------------------------------------------------------
+[ERROR] No goals have been specified for this build. You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoGoalSpecifiedException
 ]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ 
