@@ -1536,4 +1536,61 @@ export PATH=$M2:$PATH
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoGoalSpecifiedException
-]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ 
+]0;ec2-user@ip-172-31-3-118:~/myrepo\[ec2-user@ip-172-31-3-118 myrepo]$ ]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ cd ../myin[Kma[K[K[Kdockerimage/
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[C^C
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ cat Dockerfile 
+FROM centos:latest
+MAINTAINER matti
+RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+RUN yum install -y tomcat.noarch 
+RUN mkdir /logs
+ENV NAME tomcat
+ENTRYPOINT tomcat start && tail -F /logs/catalina.out
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[C[16@r': cat Dockerfilem': docker rm -f `docker ps -a -q`[19@[ec2-user@ip-172-31-11-152 mydockerimage]$[C[C[C[C[C[C[C[C
+d5a5c003748d
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[Cb': docker build -t myimage .[1@u[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[17@[ec2-user@ip-172-31-11-152 mydockerimage]$[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM centos:latest
+ ---> 970633036444
+Step 2 : MAINTAINER matti
+ ---> Using cache
+ ---> 16b8415a88cb
+Step 3 : RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+ ---> Using cache
+ ---> 7a4f8e4dfb66
+Step 4 : RUN yum install -y tomcat.noarch
+ ---> Using cache
+ ---> e4e684df3e64
+Step 5 : RUN mkdir /logs
+ ---> Using cache
+ ---> 34ed3805ec36
+Step 6 : ENV NAME tomcat
+ ---> Using cache
+ ---> c46855bb8f44
+Step 7 : ENTRYPOINT tomcat start && tail -F /logs/catalina.out
+ ---> Using cache
+ ---> e0edf2a2d318
+Successfully built e0edf2a2d318
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[Ci': docker build -t myimage .[2Pt': docker run -it myimage^C
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[Ct': docker build -t myimage .[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[Ci': docker build -t myimage .[2Pt': docker run -it myimage^C
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[C8': curl localhost:8080[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@8[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ [21P(reverse-i-search)`':[Ci': docker build -t myimage .[2Pt': docker run -it myimage[19@[ec2-user@ip-172-31-11-152 mydockerimage]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd myimage[C myimage- myimagep myimage[C myimage8 myimage0 myimage8 myimage0 myimage: myimage8 myimage0 myimage8 myimage0 myimage[C myimage
+46a71f4afcd69c1fa4ca9e18a370901c691ead21ba41861f5cc5b071f13aa507
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ d[K[21P(reverse-i-search)`':[Cp': docker run -itd -p 8080:8080  myimage[24Ps': docker ps -a[19@[ec2-user@ip-172-31-11-152 mydockerimage]$[C[C[C[C[C[C[C[C
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+46a71f4afcd6        myimage             "/bin/sh -c 'tomcat s"   5 seconds ago       Up 4 seconds        0.0.0.0:8080->8080/tcp   cranky_banach
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ cp Dockerfile my[K[K../myrepo/
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ ls
+Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cd mm[Ky repo
+bash: cd: my: No such file or directory
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ l[Kcd my repo[1Prepo
