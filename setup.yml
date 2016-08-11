@@ -18,3 +18,7 @@
     lineinfile: dest=~/.bash_profile state=present line="export M2=${M2_HOME}/bin"
   - name: set maven env
     lineinfile: dest=~/.bash_profile state=present line="export PATH=$M2:$PATH"
+  - name: install docker
+    yum: name=docker state=latest
+    become: yes
+    become_method: sudo
