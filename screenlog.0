@@ -1594,3 +1594,113 @@ Dockerfile
 ]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cd mm[Ky repo
 bash: cd: my: No such file or directory
 ]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ l[Kcd my repo[1Prepo
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls -ltr
+total 244
+-rw-rw-r-- 1 ec2-user ec2-user      8 Aug 11 08:23 README.md
+-rw-rw-r-- 1 ec2-user ec2-user   1325 Aug 11 08:49 setup.yml
+-rw-r--r-- 1 ec2-user docker      207 Aug 11 11:10 Dockerfile
+-rw-rw-r-- 1 ec2-user ec2-user 234865 Aug 11 11:10 screenlog.0
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cg': docker run -itd -p 8080:8080  myimage[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci': git push [K[1@t[C[C[C[1@ [C[C[Ca': git add .[1@d[C[C[C[8@[ec2-user@ip-172-31-11-152 myrepo]$[C
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cc': cd myrepoo': dcoker psm': git commit -m "commit 1"[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ mkdir my [Kimgae
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ cd myimgae/
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ mv ../Dockerfile .
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ ls -ltr
+total 4
+-rw-r--r-- 1 ec2-user docker 207 Aug 11 11:10 Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cr': ls -ltrm': docker rm -f `docker ps -a -q`[13@[ec2-user@ip-172-31-11-152 myimgae]$[C[C[C[C[C[C[C[C
+46a71f4afcd6
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cb': docker build -t myimage .[1@u[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[12@[ec2-user@ip-172-31-11-152 myimgae]$[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM centos:latest
+ ---> 970633036444
+Step 2 : MAINTAINER matti
+ ---> Using cache
+ ---> 16b8415a88cb
+Step 3 : RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+ ---> Using cache
+ ---> 7a4f8e4dfb66
+Step 4 : RUN yum install -y tomcat.noarch
+ ---> Using cache
+ ---> e4e684df3e64
+Step 5 : RUN mkdir /logs
+ ---> Using cache
+ ---> 34ed3805ec36
+Step 6 : ENV NAME tomcat
+ ---> Using cache
+ ---> c46855bb8f44
+Step 7 : ENTRYPOINT tomcat start && tail -F /logs/catalina.out
+ ---> Using cache
+ ---> e0edf2a2d318
+Successfully built e0edf2a2d318
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Ci': docker build -t myimage .[15Pt': git addd': docker run -itd -p 8080:8080  myimage[12@[ec2-user@ip-172-31-11-152 myimgae]$[C[C[C[C[C[C[C[C[C[C[C[C[C
+654318d44d81a7258df36b9f7e58c95a4b54781bc3d90e03ce1f1e1c8a8e671e
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[C^C
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ ur^C
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cc': docker run -itd -p 8080:8080  myimage[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Pu': curl localhost:8080[1@r[C[C[C[1@l[C[C[C[11@[ec2-user@ip-172-31-11-152 myimgae]$[C
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ telnet[Kcurl localhost:8080[1P localhost:8080[1P localhost:8080[1P localhost:8080[1P localhost:8080t localhost:8080e localhost:8080l localhost:8080n localhost:8080e localhost:8080t localhost:8080[C localhost:8080
+bash: telnet: command not found
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ curl locahost:8080
+curl: (6) Could not resolve host: locahost
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ curl locahost:8080lhost:8080
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cg': docker run -itd -p 8080:8080  myimage[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci': git add .[K[1@t[C[C[C[1@ [C[C[C[1@a[C[C[C[1@d[C[C[C[9@[ec2-user@ip-172-31-11-152 myimgae]$[C
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cc': curl localhost:8080[9Po': dcoker psm': git commit -m "commit 1"[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11@[ec2-user@ip-172-31-11-152 myimgae]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master 4139551] commit 1
+ Committer: EC2 Default User <ec2-user@ip-172-31-11-152.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 72 insertions(+), 1 deletion(-)
+ create mode 100644 Dockerfile
+ create mode 100644 myimgae/Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ [15P(reverse-i-search)`':[Cp': docker run -itd -p 8080:8080  myimageu': git push [K[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[11@[ec2-user@ip-172-31-11-152 myimgae]$[C[C[C[C[C
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 8, done.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 2.16 KiB | 0 bytes/s, done.
+Total 8 (delta 3), reused 0 (delta 0)
+To https://github.com/Matti2010/myrepo.git
+   f505342..4139551  master -> master
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ ls -ltr
+total 4
+-rw-r--r-- 1 ec2-user docker 207 Aug 11 11:10 Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimgae\[ec2-user@ip-172-31-11-152 myimgae]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ mv myimgae/ myimgae/[K[K[K[Kage
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls -tlr
+total 252
+-rw-rw-r-- 1 ec2-user ec2-user      8 Aug 11 08:23 README.md
+-rw-rw-r-- 1 ec2-user ec2-user   1325 Aug 11 08:49 setup.yml
+drwxr-xr-x 2 ec2-user docker     4096 Aug 11 11:11 [0m[01;34mmyimage[0m
+-rw-rw-r-- 1 ec2-user ec2-user 243231 Aug 11 11:13 screenlog.0
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Ca': mv myimgae/ myimage
