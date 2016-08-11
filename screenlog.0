@@ -4235,3 +4235,398 @@ total 39364
 [1m[34m~                                                                                                                                            [11;1H~                                                                                                                                            [12;1H~                                                                                                                                            [13;1H~                                                                                                                                            [14;1H~                                                                                                                                            [15;1H~                                                                                                                                            [16;1H~                                                                                                                                            [17;1H~                                                                                                                                            [18;1H~                                                                                                                                            [19;1H~                                                                                                                                            [20;1H~                                                                                                                                            [21;1H~                                                                                                                                            [22;1H~                                                                                                                                            [23;1H~                                                                                                                                            [24;1H~                                                                                                                                            [25;1H~                                                                                                                                            [26;1H~                                                                                                                                            [27;1H~                                                                                                                                            [28;1H~                                                                                                                                            [29;1H~                                                                                                                                            [30;1H~                                                                                                                                            [31;1H~                                                                                                                                            [32;1H~                                                                                                                                            [33;1H~                                                                                                                                            [0m[34;124H8,1[11CAll[8;1H[34h[?25h[?25l[34;1H[K[34;1H:[34h[?25hq[?25l[34;1H[K[34;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
 ]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
 ]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Ca': docker run -itd -p 8080:8080  myimage[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd': git add .[K[1@d[C[C[C[C[C[C[C[11@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cs': ls -ltrt': curl localhost:8080[8Pa': git status[1@t[C[C[C[C[C[C[C[1@u[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[8@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   myimage/Dockerfile[m
+	[32mnew file:   myimage/petclinic.war[m
+	[32mmodified:   screenlog.0[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   screenlog.0[m
+
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cc': cd ..o': git commit -m "commit 1"[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"p"e"t"c"l"i"n"i"c" "[1P"[C[C[C[C[C[C[C[C[C "o"n"a"i"r" air"[1Pair"[C[C[C[1P"[1P"[C[1P"push [Kcd ../petclinic/[3Pmaven package[2Pv[C[C[C[C[C[C[C[C[Ccd ../myrepo/myimage/p /home/ec2-user/petclinic/target/petclinic.war .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi Dockerfile [Kcp /home/ec2-user/petclinic/target/petclinic.war .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pd ../myrepo/myimage/[10Pmvn package[2@ave[C[C[C[C[C[C[C[C[Ccd ../petclinic/[7Pgit push commit -m "commit petclinic on"aon"ion"ron"[1Pon"[1Pon"[1Pon"ion"son" on"[1Pon"[1Pon"[1Pon"[C[C
+[master f5bca5f] commit petclinic on
+ Committer: EC2 Default User <ec2-user@ip-172-31-11-152.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 2534 insertions(+), 1 deletion(-)
+ create mode 100644 myimage/petclinic.war
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cp': git commit -m "commit petclinic on"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pu': git push [1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[10@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com	
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 6, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  66% (4/6), 1.05 MiB | 1.73 MiB/s   Writing objects:  66% (4/6), 15.05 MiB | 9.35 MiB/s   Writing objects:  66% (4/6), 30.86 MiB | 11.80 MiB/s   Writing objects:  83% (5/6), 30.86 MiB | 11.80 MiB/s   Writing objects: 100% (6/6), 30.86 MiB | 11.80 MiB/s   Writing objects: 100% (6/6), 34.36 MiB | 11.80 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To https://github.com/Matti2010/myrepo.git
+   c96d9bb..f5bca5f  master -> master
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[C[15@r': vi Dockerfilem': docker rm -f `docker ps -a -q`[12@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C[C[C[C
+d476cad37048
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;34r[34l[34h[?25h[23m[24m[0m[H[J[?25l[34;1H"setup.yml" 33L, 1325C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven" copy=no cc[15;1Hreates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2_HOME=~/maven/apache-maven-3.3.9"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2=${M2_HOME}/bin"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export PATH=$M2:$PATH"
+  [33m- [0m[36mname[0m[35m:[0m install docker
+    [36myum[0m[35m:[0m name=docker state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m add group docker to user ec2-user
+    [36muser[0m[35m:[0m append=yes groups=docker name=ec2-user
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m start docker service
+    [36mservice[0m[35m:[0m name=docker state=started
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo[34;124H26,5[10CTop[27;5H[34h[?25h[?25l[1;33r[33;1H
+[1;34r[34;1H[K[34;124H33,1[10CBot[33;1H[34h[?25h[?25l
+[1m-- INSERT --[0m[34;124H[K[34;124H33,1[10CBot[33;1H[34h[?25h[?25l[34;127H2[33;2H[34h[?25h[?25l[34;127H3[33;3H[34h[?25h[?25l[1;33r[1;1H[16M[1;34r[17;3H[33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+    [36mget_url[0m[35m:[0m url=http://pkg.jenkins-ci.org/redhat/jenkins.repo[21;12Hdest=/etc/yum.repos.d/jenkins.repo mode=0644
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins GPG key installed
+    [36mcommand[0m[35m:[0m rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins installed
+    [36myum[0m[35m:[0m name=jenkins state=present
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins is running
+    [36mservice[0m[35m:[0m name=jenkins state=running enabled=[31mtrue[0m
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo[34;124H[K[34;124H49,24[9CBot[33;24H[34h[?25h[34;1H[K[?25l[34;124H49,23[9CBot[33;23H[34h[?25h[?25l[34;124H[K[34;1H:[34h[?25hq![?25l[34;1H[K[34;1H[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ vi setup.yml 
+[?1049h[?1h=[1;34r[34l[34h[?25h[23m[24m[0m[H[J[?25l[34;1H"setup.yml" 33L, 1325C[1;1H[33m- [0m[36mhosts[0m[35m:[0m localhost
+  [36mtasks[0m[35m:[0m
+  [33m- [0m[36mname[0m[35m:[0m install Git
+    [36myum[0m[35m:[0m name=git state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m clone myrepo
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/myrepo.git dest=/home/ec2-user/myrepo update=no
+  [33m- [0m[36mname[0m[35m:[0m clone petclinic
+    [36mgit[0m[35m:[0m repo=https://github.com/Matti2010/spring-petclinic.git dest=/home/ec2-user/petclinic
+  [33m- [0m[36mname[0m[35m:[0m mkdir ~/maven
+    [36mfile[0m[35m:[0m path=~/maven state=directory mode=0755
+  [33m- [0m[36mname[0m[35m:[0m install maven
+    [36munarchive[0m[35m:[0m src="http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" dest="/home/ec2-user/maven" copy=no cc[15;1Hreates=~/maven/apache-maven-3.3.9/README.txt
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2_HOME=~/maven/apache-maven-3.3.9"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export M2=${M2_HOME}/bin"
+  [33m- [0m[36mname[0m[35m:[0m set maven env
+    [36mlineinfile[0m[35m:[0m dest=~/.bash_profile state=present line="export PATH=$M2:$PATH"
+  [33m- [0m[36mname[0m[35m:[0m install docker
+    [36myum[0m[35m:[0m name=docker state=latest
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m add group docker to user ec2-user
+    [36muser[0m[35m:[0m append=yes groups=docker name=ec2-user
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m start docker service
+    [36mservice[0m[35m:[0m name=docker state=started
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo[34;124H1,1[11CTop[1;1H[34h[?25h[?25l[1;33r[33;1H
+[1;34r[34;1H[K[34;124H33,1[10CBot[33;1H[34h[?25h[?25l
+[1m-- INSERT --[0m[34;124H[K[34;124H33,1[10CBot[33;1H[34h[?25h[?25l[1;33r[1;1H[16M[1;34r[17;1H[33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+    [36mget_url[0m[35m:[0m url=http://pkg.jenkins-ci.org/redhat/jenkins.repo[21;12Hdest=/etc/yum.repos.d/jenkins.repo mode=0644
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins GPG key installed
+    [36mcommand[0m[35m:[0m rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins installed
+    [36myum[0m[35m:[0m name=jenkins state=present
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo
+  [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins is running
+    [36mservice[0m[35m:[0m name=jenkins state=running enabled=[31mtrue[0m
+    [36mbecome[0m[35m:[0m yes
+    [36mbecome_method[0m[35m:[0m sudo[34;124H[K[34;124H49,24[9CBot[33;24H[34h[?25h[?25l[34;125H8,16[32;16H[34h[?25h[?25l[34;125H7,24[31;24H[34h[?25h[?25l[34;125H6[30;24H[34h[?25h[?25l[34;125H5[29;24H[34h[?25h[?25l[34;125H4,16[28;16H[34h[?25h[?25l[34;125H3,24[27;24H[34h[?25h[?25l[34;125H2[26;24H[34h[?25h[?25l[34;125H1[25;24H[34h[?25h[?25l[34;125H0,16[24;16H[34h[?25h[?25l[34;124H39,24[23;24H[34h[?25h[?25l[34;125H8[22;24H[34h[?25h[?25l[34;125H7[21;24H[34h[?25h[?25l[34;125H6[20;24H[34h[?25h[?25l[34;125H5[19;24H[34h[?25h[?25l[34;125H4,16[18;16H[34h[?25h[?25l[34;125H3,24[17;24H[34h[?25h[?25l[34;128H3[17;23H[34h[?25h[?25l[34;128H2[17;22H[34h[?25h[?25l[34;128H1[17;21H[34h[?25h[?25l[34;128H0[17;20H[34h[?25h[?25l[34;127H19[17;19H[34h[?25h[?25l[34;128H8[17;18H[34h[?25h[?25l[34;128H7[17;17H[34h[?25h[?25l[34;128H6[17;16H[34h[?25h[?25l[34;128H5[17;15H[34h[?25h[?25l[34;128H4[17;14H[34h[?25h[?25l[34;128H3[17;13H[34h[?25h[?25l[34;128H2[17;12H[34h[?25h[?25l[34;128H1[17;11H[34h[?25h[?25l[34;128H0[17;10H[34h[?25h[?25l[34;127H9 [17;9H[34h[?25h[?25l[34;127H8[17;8H[34h[?25h[?25l[34;127H7[17;7H[34h[?25h[?25l[34;127H6[17;6H[34h[?25h[?25l[34;127H5[17;5H[34h[?25h[?25l[34;127H4[17;4H[34h[?25h[?25l[34;127H3[17;3H[34h[?25h[?25l[34;127H2[17;2H[34h[?25h[?25l[34;127H1[17;1H[34h[?25h[?25l [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present[34;127H2[17;2H[34h[?25h[?25l [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present[34;127H3[17;3H[34h[?25h[?25l [33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present[34;127H4[17;4H[34h[?25h[?25l[33m- [0m[36mname[0m[35m:[0m Ensure Jenkins Yum repo present[17;42H[K[34;127H3[17;3H[34h[?25h[?25l[34;125H4[18;3H[34h[?25h[?25l[34;125H5[19;3H[34h[?25h[?25l[34;125H6[20;3H[34h[?25h[?25l[34;125H7[21;3H[34h[?25h[?25l[34;125H8[22;3H[34h[?25h[?25l[34;125H9[23;3H[34h[?25h[?25l[34;124H40[24;3H[34h[?25h[?25l[34;125H1[25;3H[34h[?25h[?25l[34;125H2[26;3H[34h[?25h[?25l[34;125H3[27;3H[34h[?25h[?25l[34;125H4[28;3H[34h[?25h[?25l[34;125H5[29;3H[34h[?25h[?25l[34;125H6[30;3H[34h[?25h[?25l[34;125H7[31;3H[34h[?25h[?25l[34;125H8[32;3H[34h[?25h[?25l[34;125H9[33;3H[34h[?25h[34;1H[K[33;2H[?25l[34;124H49,2[10CBot[33;2H[34h[?25h[?25l[34;124H[K[34;1H:[34h[?25hx[?25l"setup.yml" 49L, 1926C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[Cb': docker build -t myimage .[1@u[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[C[14@p': vi setup.yml[15@l': ansible-playbook[1@a[C[C[C[C[C[C[C[C[C[C[C[11@[ec2-user@ip-172-31-11-152 myrepo]$[C[C[C[C[C[C[C[C[C
+[1;35m [WARNING]: provided hosts list is empty, only localhost is available
+[0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [localhost][0m
+
+TASK [install Git] *************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone myrepo] ************************************************************
+[0;32mok: [localhost][0m
+
+TASK [clone petclinic] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [mkdir ~/maven] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install maven] ***********************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [set maven env] ***********************************************************
+[0;32mok: [localhost][0m
+
+TASK [install docker] **********************************************************
+[0;32mok: [localhost][0m
+
+TASK [add group docker to user ec2-user] ***************************************
+[0;33mchanged: [localhost][0m
+
+TASK [start docker service] ****************************************************
+[0;32mok: [localhost][0m
+
+TASK [Ensure Jenkins Yum repo present] *****************************************
+[0;33mchanged: [localhost][0m
+
+TASK [Ensure Jenkins GPG key installed] ****************************************
+[0;33mchanged: [localhost][0m
+[1;35m [WARNING]: Consider using yum module rather than running rpm
+[0m
+
+TASK [Ensure Jenkins installed] ************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [Ensure Jenkins is running] ***********************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok[0m[0;32m=[0m[0;32m15[0m   [0;33mchanged[0m[0;33m=[0m[0;33m5[0m    unreachable=0    failed=0   
+
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ jenkin
+bash: jenkin: command not found
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ jenkin
+bash: jenkin: command not found
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ cd im[K[Kmyimage/
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ ls -ltr
+total 39364
+-rw-r--r-- 1 ec2-user docker 40301563 Aug 11 11:37 [0m[01;31mpetclinic.war[0m
+-rw-r--r-- 1 ec2-user docker      252 Aug 11 11:41 Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ rm petclinic.war ^C
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cat /var/lib/jenkins/secrets/initialAdminPassword
+cat: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cat /var/lib/jenkins/secrets/initialAdminPassword
+cat: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cat /var/lib/jenkins/secrets/initialAdminPassword
+cat: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ 
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cat /var/lib/jenkins/secrets/initialAdminPassword[1@s[1@u[1@d[1@o[1@ 
+6cd1fdff015846d195a04c6fd473e060
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ q[Kls -ltr
+total 39364
+-rw-r--r-- 1 ec2-user docker 40301563 Aug 11 11:37 [0m[01;31mpetclinic.war[0m
+-rw-r--r-- 1 ec2-user docker      252 Aug 11 11:41 Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/myrepo/myimage\[ec2-user@ip-172-31-11-152 myimage]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls
+README.md  [0m[01;34mmyimage[0m  screenlog.0  setup.yml
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls -ltr
+total 1436
+-rw-rw-r-- 1 ec2-user ec2-user       8 Aug 11 08:23 README.md
+drwxr-xr-x 2 ec2-user docker      4096 Aug 11 11:51 [0m[01;34mmyimage[0m
+-rw-rw-r-- 1 ec2-user ec2-user    1926 Aug 11 12:00 setup.yml
+-rw-rw-r-- 1 ec2-user ec2-user 1455749 Aug 11 12:39 screenlog.0
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ pwd
+/home/ec2-user/myrepo
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ cd ../
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ ls
+[0m[01;34mmaven[0m  [01;34mmydockerimage[0m  [01;34mmyrepo[0m  [01;34mpetclinic[0m
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cd mydockerimage/
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ ls
+Dockerfile
+]0;ec2-user@ip-172-31-11-152:~/mydockerimage\[ec2-user@ip-172-31-11-152 mydockerimage]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cd my rep[K[K[K[Krepo/
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls
+README.md  [0m[01;34mmyimage[0m  screenlog.0  setup.yml
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ cd ..
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cat mydockerimage/Dockerfile 
+FROM centos:latest
+MAINTAINER matti
+RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+RUN yum install -y tomcat.noarch 
+RUN mkdir /logs
+ENV NAME tomcat
+ENTRYPOINT tomcat start && tail -F /logs/catalina.out
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cat mydockerimage/Dockerfile [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krepo/myimage/
+Dockerfile     petclinic.war  
+[ec2-user@ip-172-31-11-152 ~]$ cat myrepo/myimage/Dockerfile 
+FROM centos:latest
+MAINTAINER matti
+RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+RUN yum install -y tomcat.noarch 
+RUN mkdir /logs
+ENV NAME tomcat
+ENTRYPOINT tomcat start && tail -F /logs/catalina.out
+ADD petclinic.war /usr/share/tomcat/webapps
+
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ rm -rf mydockerimage/[1P mydockerimage/
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ ls -tlr
+total 12
+drwxr-xr-x 3 ec2-user ec2-user 4096 Aug 11 08:23 [0m[01;34mmaven[0m
+drwxrwxr-x 6 ec2-user ec2-user 4096 Aug 11 11:35 [01;34mpetclinic[0m
+drwxrwxr-x 4 ec2-user ec2-user 4096 Aug 11 12:00 [01;34mmyrepo[0m
+]0;ec2-user@ip-172-31-11-152:~\[ec2-user@ip-172-31-11-152 ~]$ cd petclinic/
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ vi pom.xml 
+[?1049h[?1h=[1;34r[34l[34h[?25h[23m[24m[0m[H[J[?25l[34;1H"pom.xml" 457L, 17012C[1;1H[34m<?[0m[32mxml version[0m=[31m"1.0"[0m[32m encoding[0m=[31m"UTF-8"[0m[34m?>[0m
+[36m<project [0m[32mxmlns[0m[34m:[0m[32mxsi[0m=[31m"http://www.w3.org/2001/XMLSchema-instance"[0m[36m [0m[32mxmlns[0m=[31m"http://maven.apache.org/POM/4.0.0"[0m
+[36m         [0m[32mxsi[0m[34m:[0m[32mschemaLocation[0m=[31m"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"[0m[36m>
+[0m    [36m<modelVersion>[0m4.0.0[36m</modelVersion>
+[0m    [36m<groupId>[0morg.springframework.samples[36m</groupId>
+[0m    [36m<artifactId>[0mspring-petclinic[36m</artifactId>
+[0m    [36m<version>[0m4.2.6-SNAPSHOT[36m</version>[9;5H<name>[0mpetclinic[36m</name>
+[0m    [36m<packaging>[0mwar[36m</packaging>[12;5H<properties>[0m[14;9H[34m<!-- Generic properties -->[0m[15;9H[36m<java[0m[34m.[0m[36mversion>[0m1.7[36m</java[0m[34m.[0m[36mversion>[16;9H<project[0m[34m.[0m[36mbuild[0m[34m.[0m[36msourceEncoding>[0mUTF-8[36m</project[0m[34m.[0m[36mbuild[0m[34m.[0m[36msourceEncoding>[17;9H<project[0m[34m.[0m[36mreporting[0m[34m.[0m[36moutputEncoding>[0mUTF-8[36m</project[0m[34m.[0m[36mreporting[0m[34m.[0m[36moutputEncoding>[0m[19;9H[34m<!-- Spring -->[0m[20;9H[36m<spring-io-platform[0m[34m.[0m[36mversion>[0m2.0.6.RELEASE[36m</spring-io-platform[0m[34m.[0m[36mversion>[21;9H<spring-data-jdbc[0m[34m.[0m[36mversion>[0m1.1.0.RELEASE[36m</spring-data-jdbc[0m[34m.[0m[36mversion>[0m[24;9H[34m<!-- Java EE / Java SE dependencies -->[0m[25;9H[36m<tomcat[0m[34m.[0m[36mversion>[0m7.0.59[36m</tomcat[0m[34m.[0m[36mversion>[0m[27;9H[34m<!-- Test -->[0m[28;9H[36m<assertj[0m[34m.[0m[36mversion>[0m2.2.0[36m</assertj[0m[34m.[0m[36mversion>[0m[30;9H[34m<!-- Dates -->[0m[31;9H[36m<jodatime-hibernate[0m[34m.[0m[36mversion>[0m1.3[36m</jodatime-hibernate[0m[34m.[0m[36mversion>[32;9H<jodatime-jsptags[0m[34m.[0m[36mversion>[0m1.1.1[36m</jodatime-jsptags[0m[34m.[0m[36mversion>[33;9H<jadira-usertype-core[0m[34m.[0m[36mversion>[0m3.2.0.GA[36m</jadira-usertype-core[0m[34m.[0m[36mversion>[0m[34;124H1,1[11CTop[1;1H[34h[?25h[?25l[34;124H2[2;1H[34h[?25h[?25l[34;124H3[3;1H[34h[?25h[?25l[34;124H4[4;1H[34h[?25h[?25l[34;124H5[5;1H[34h[?25h[?25l[34;126H2[5;2H[34h[?25h[?25l[34;126H3[5;3H[34h[?25h[?25l[34;126H4[5;4H[34h[?25h[?25l[34;126H5[5;5H[34h[?25h[?25l[34;126H6[5;6H[34h[?25h[?25l[34;126H7[5;7H[34h[?25h[?25l[34;126H8[5;8H[34h[?25h[?25l[34;126H9[5;9H[34h[?25h[?25l[34;126H10[5;10H[34h[?25h[?25l[34;127H1[5;11H[34h[?25h[?25l[34;127H2[5;12H[34h[?25h[?25l[34;127H3[5;13H[34h[?25h[?25l[34;127H4[5;14H[34h[?25h[?25l[34;127H5[5;15H[34h[?25h[?25l[34;127H6[5;16H[34h[?25h[?25l[34;127H7[5;17H[34h[?25h[?25l[34;127H8[5;18H[34h[?25h[?25l[34;127H9[5;19H[34h[?25h[?25l[34;124H6[6;19H[34h[?25h[?25l[34;126H20[6;20H[34h[?25h[?25l[34;127H1[6;21H[34h[?25h[?25l[34;127H2[6;22H[34h[?25h[?25l[34;127H3[6;23H[34h[?25h[?25l[34;127H4[6;24H[34h[?25h[?25l[34;127H5[6;25H[34h[?25h[?25l[34;127H6[6;26H[34h[?25h[?25l[34;127H7[6;27H[34h[?25h[?25l[34;127H8[6;28H[34h[?25h[?25l[34;127H9[6;29H[34h[?25h[?25l[34;126H30[6;30H[34h[?25h[?25l[34;127H1[6;31H[34h[?25h[?25l[34;127H2[6;32H[34h[?25h[?25l[34;127H3[6;33H[34h[?25h[?25l[34;1H[1m-- INSERT --[0m[34;13H[K[34;124H6,33[10CTop[6;33H[34h[?25h[?25l-[36m</artifactId>[0m[34;127H4[6;34H[34h[?25h[?25lM[36m</artifactId>[0m[34;127H5[6;35H[34h[?25h[?25lA[36m</artifactId>[0m[34;127H6[6;36H[34h[?25h[?25lT[36m</artifactId>[0m[34;127H7[6;37H[34h[?25h[?25lI[36m</artifactId>[0m[34;127H8[6;38H[34h[?25h[34;1H[K[?25l[34;124H6,37[10CTop[6;37H[34h[?25h[?25l[34;124H[K[34;1H:[34h[?25hx[?25l"pom.xml" 457L, 17017C written
+[?1l>[34h[?25h[?1049l]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[Ca': rm -r mydockerimage/[10Pd': git add .[15@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[Cc': cd petclinic/o': git commit -m "commit petclinic on"[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P on"[1Pon"[1Pn"[1P"[1P"
+[master ce604f6] commit
+ Committer: EC2 Default User <ec2-user@ip-172-31-11-152.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[C[12@p': vi pom.xml[1Pu': git push[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[13@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 3, done.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 326 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://github.com/Matti2010/spring-petclinic.git
+   eddc72c..ce604f6  master -> master
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[C[10@g': git pushe': rm -r mydockerimage/t': cp /home/ec2-user/petclinic/target/petclinic.war .^C
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[Ca': git add .[1@d[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[14@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[Cc': git commit -m "commit"[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ [17P(reverse-i-search)`':[C[10@p': git push[1@u[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[13@[ec2-user@ip-172-31-11-152 petclinic]$[C[C[C[C[C
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Everything up-to-date
+]0;ec2-user@ip-172-31-11-152:~/petclinic\[ec2-user@ip-172-31-11-152 petclinic]$ cd ../myrepo/
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ ls -ltr
+total 1448
+-rw-rw-r-- 1 ec2-user ec2-user       8 Aug 11 08:23 README.md
+drwxr-xr-x 2 ec2-user docker      4096 Aug 11 11:51 [0m[01;34mmyimage[0m
+-rw-rw-r-- 1 ec2-user ec2-user    1926 Aug 11 12:00 setup.yml
+-rw-rw-r-- 1 ec2-user ec2-user 1468001 Aug 11 13:31 screenlog.0
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[C
