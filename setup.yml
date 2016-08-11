@@ -23,7 +23,11 @@
     become: yes
     become_method: sudo
   - name: add group docker to user ec2-user
-    user: name=ec2-user group=docker
+    user: append=yes groups=docker name=ec2-user 
+    become: yes
+    become_method: sudo
+  - name: start docker service
+    service: name=docker state=started
     become: yes
     become_method: sudo
  
