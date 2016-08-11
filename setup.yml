@@ -22,3 +22,8 @@
     yum: name=docker state=latest
     become: yes
     become_method: sudo
+  - name: add group docker to user ec2-user
+    user: name=ec2-user group=docker
+    become: yes
+    become_method: sudo
+ 
