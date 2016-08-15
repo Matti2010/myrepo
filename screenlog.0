@@ -4629,4 +4629,326 @@ total 1448
 drwxr-xr-x 2 ec2-user docker      4096 Aug 11 11:51 [0m[01;34mmyimage[0m
 -rw-rw-r-- 1 ec2-user ec2-user    1926 Aug 11 12:00 setup.yml
 -rw-rw-r-- 1 ec2-user ec2-user 1468001 Aug 11 13:31 screenlog.0
-]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[C
+]0;ec2-user@ip-172-31-11-152:~/myrepo\[ec2-user@ip-172-31-11-152 myrepo]$ [14P(reverse-i-search)`':[C]0;ec2-user@ip-172-31-6-180:~/myrepo\[ec2-user@ip-172-31-6-180 myrepo]$ git pushcommit -m "commit 1"[7Pless screenlog.0 [1Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pgit add .cat screenlog.0 [7Pgit add .vi docker_commandscreate_image.yml [3PDockerfile.j2[Cmv ../mydockerimage/create_image.yml .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pvi Dockerfile.j2 [3@create_image.yml[C[2Pdocker_commands[9Pgit add .cat screenlog.0 [1@less[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "commit 1"push[K[Kdocker pull ^C
+]0;ec2-user@ip-172-31-6-180:~/myrepo\[ec2-user@ip-172-31-6-180 myrepo]$ cd ..
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ ls
+[0m[01;34mmaven[0m  [01;34mmydockerimage[0m  [01;34mmyrepo[0m  [01;34mpetclinic[0m
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker [K swarn[K[K[K[K[Kimages
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+petclinic           latest              83ec837c9d47        4 hours ago         544.2 MB
+centos              latest              970633036444        2 weeks ago         196.7 MB
+swarm               latest              f0aa3f353dfd        2 weeks ago         19.47 MB
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker run -d --ner[Kt=^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker run -d -p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000 consul://52.59.27.121:8500
+d3678f3823aa7d28684424cd3c6bf53d4f2a99cd8536265a3de0564364da089b
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                              NAMES
+d3678f3823aa        swarm               "/swarm manage -H :40"   About a minute ago   Up About a minute   2375/tcp, 0.0.0.0:4000->4000/tcp   hopeful_wilson
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker[Kr ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+d3678f3823aa        swarm               "/swarm manage -H :40"   2 minutes ago       Up 2 minutes        2375/tcp, 0.0.0.0:4000->4000/tcp   hopeful_wilson
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker rm d3678f3823aa a0afa
+Error response from daemon: You cannot remove a running container d3678f3823aa7d28684424cd3c6bf53d4f2a99cd8536265a3de0564364da089b. Stop the container before attempting removal or use -f
+Error response from daemon: No such container: 0fa
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker rm d3678f3823a 0fa[K[K[K[C[1@ [1@-[1@f
+d3678f3823a
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker rm -f d3678f3823a d3678f3823a 0faps[Krun -d -p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Cr': docker pse': docker run -d -p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@p[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+c0573b964bea5a780796ce9bd7bcb05eac8368763fc7da702fe49f166c300b5f
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker run -d swarm join --advertise [K=52.59.96.240:2375 consul://52.59.27.121:8500
+cabffc6bba0c8209f1c0cb19b4a53037ad96fb20fd427033e342d0356469d23e
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker -H :4000 o[Kinfo
+Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
+Images: 0
+Server Version: swarm/1.2.4
+Role: replica
+Primary: 52.59.27.121:4000
+Strategy: spread
+Filters: health, port, containerslots, dependency, affinity, constraint
+Nodes: 7
+ (unknown): 52.59.48.126:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:24:49Z
+  └ ServerVersion: 
+ (unknown): 52.59.1.41:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:24:39Z
+  └ ServerVersion: 
+ (unknown): 52.59.80.74:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:25:09Z
+  └ ServerVersion: 
+ (unknown): 52.59.68.191:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:25:19Z
+  └ ServerVersion: 
+ (unknown): 52.59.95.5:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:25:19Z
+  └ ServerVersion: 
+ (unknown): 52.59.96.240:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:25:39Z
+  └ ServerVersion: 
+ (unknown): 52.59.99.48:2375
+  └ ID: 
+  └ Status: Pending
+  └ Containers: 0
+  └ Reserved CPUs: 0 / 0
+  └ Reserved Memory: 0 B / 0 B
+  └ Labels: 
+  └ Error: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+  └ UpdatedAt: 2016-08-15T12:25:39Z
+  └ ServerVersion: 
+Plugins: 
+ Volume: 
+ Network: 
+Kernel Version: 4.1.10-17.31.amzn1.x86_64
+Operating System: linux
+Architecture: amd64
+CPUs: 0
+Total Memory: 0 B
+Name: c0573b964bea
+Docker Root Dir: 
+Debug mode (client): false
+Debug mode (server): false
+WARNING: No kernel memory limit support
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+petclinic           latest              83ec837c9d47        4 hours ago         544.2 MB
+centos              latest              970633036444        2 weeks ago         196.7 MB
+swarm               latest              f0aa3f353dfd        2 weeks ago         19.47 MB
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker petclinic^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Cp': docker run -d -p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[80Pe': docker run -itd -p 9080:8080 petclinic[6@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+e2b331b124df31320af27bc7d60a351dbb44656feadbe8553970dc1aa0075f7a
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ dcoker -H :4000 run petclinic-petclinic[Cpetclinic petclinic9petclinic0petclinic9petclinic0petclinic:petclinic8petclinic0petclinic8petclinic0petclinic petclinic
+bash: dcoker: command not found
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ dcoker -H :4000 run -p 9090:8080 petclinic[1P[C[1@c
+docker: Error response from daemon: No healthy node available in the cluster.
+See 'docker run --help'.
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Cr': docker -H :4000 run -p 9090:8080 petclinicm': docker run -d swarm join --advertise=52.59.96.240:2375 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[55P-': docker rm -f d3678f3823a [1@f[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ z[K`[K[8P(reverse-i-search)`':[C`': docker rm -f `docker ps -a -q`[7@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+e2b331b124df
+cabffc6bba0c
+c0573b964bea
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Cs': docker rm -f `docker ps -a -q`[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pt': docker status^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ sudo service docker stop
+Stopping docker: [60G[[0;32m  OK  [0;39m]
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ sudo docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+[33mWARN[0m[0000] /!\ DON'T BIND ON ANY IP ADDRESS WITHOUT setting -tlsverify IF YOU DON'T KNOW WHAT YOU'RE DOING /!\ 
+[34mINFO[0m[0000] New containerd process, pid: 29333
+          
+[33mWARN[0m[0000] containerd: low RLIMIT_NOFILE changing to max  [33mcurrent[0m=1024 [33mmax[0m=4096
+[33mWARN[0m[0001] devmapper: Usage of loopback devices is strongly discouraged for production use. Please use `--storage-opt dm.thinpooldev` or use `man docker` to refer to dm.thinpooldev section. 
+[33mWARN[0m[0001] devmapper: Base device already exists and has filesystem xfs on it. User specified filesystem  will be ignored. 
+[34mINFO[0m[0001] [graphdriver] using prior storage driver "devicemapper" 
+[34mINFO[0m[0001] Graph migration to content-addressability took 0.00 seconds 
+[34mINFO[0m[0001] Firewalld running: false                     
+[34mINFO[0m[0001] Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address 
+[33mWARN[0m[0001] Your kernel does not support cgroup blkio weight 
+[33mWARN[0m[0001] Your kernel does not support cgroup blkio weight_device 
+[33mWARN[0m[0001] mountpoint for pids not found                
+[34mINFO[0m[0001] Loading containers: start.                   
+
+[34mINFO[0m[0001] Loading containers: done.                    
+[34mINFO[0m[0001] Daemon has completed initialization          
+[34mINFO[0m[0001] Docker daemon                                 [34mcommit[0m=b9f10c9/1.11.2 [34mgraphdriver[0m=devicemapper [34mversion[0m=1.11.2
+[34mINFO[0m[0001] API listen on /var/run/docker.sock           
+[34mINFO[0m[0001] API listen on [::]:2375                      
+
+^C[34mINFO[0m[0053] Processing signal 'interrupt'                
+[34mINFO[0m[0053] stopping containerd after receiving terminated 
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[C-': sudo docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[40Pa': docker rm -f `docker ps -a -q`[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd': docker run -d swarm join --advertise=52.59.96.240:2375 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@v[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+62bdc6df82c34b1d04be18f367167f78ef8b10ae0797f16973a874df1ee8140e
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Ca': docker run -d swarm join --advertise=52.59.96.240:2375 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@v[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Ca': docker run -d swarm join --advertise=52.59.96.240:2375 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@v[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@r[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[38@-p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000[3@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+d1c05a2eb3cac22404adb7b25a96d9695e4d7cbdc3427a59a9fbec253bedbb01
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ 
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+petclinic           latest              83ec837c9d47        5 hours ago         544.2 MB
+centos              latest              970633036444        2 weeks ago         196.7 MB
+swarm               latest              f0aa3f353dfd        2 weeks ago         19.47 MB
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+d1c05a2eb3ca        swarm               "/swarm manage -H :40"   6 seconds ago       Up 6 seconds        2375/tcp, 0.0.0.0:4000->4000/tcp   pensive_liskov
+62bdc6df82c3        swarm               "/swarm join --advert"   23 seconds ago      Up 23 seconds       2375/tcp                           desperate_lovelace
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker -H :4000 info
+Containers: 3
+ Running: 3
+ Paused: 0
+ Stopped: 0
+Images: 6
+Server Version: swarm/1.2.4
+Role: replica
+Primary: 52.59.27.121:4000
+Strategy: spread
+Filters: health, port, containerslots, dependency, affinity, constraint
+Nodes: 2
+ ip-172-31-6-171: 52.59.1.41:2375
+  └ ID: ANPC:GK2K:VTZ7:V5Y4:ZIBD:4E73:EWF6:RZPH:GFOT:7AY7:FZG4:KPF6
+  └ Status: Healthy
+  └ Containers: 1 (1 Running, 0 Paused, 0 Stopped)
+  └ Reserved CPUs: 0 / 1
+  └ Reserved Memory: 0 B / 1.021 GiB
+  └ Labels: kernelversion=4.1.10-17.31.amzn1.x86_64, operatingsystem=Amazon Linux AMI 2015.09, storagedriver=devicemapper
+  └ UpdatedAt: 2016-08-15T12:32:39Z
+  └ ServerVersion: 1.11.2
+ ip-172-31-6-180: 52.59.96.240:2375
+  └ ID: Q5OW:A6XP:TEEX:V5EH:RTFM:ZKV5:Q53B:H6PJ:ON7M:27XB:GPFC:PFDW
+  └ Status: Healthy
+  └ Containers: 2 (2 Running, 0 Paused, 0 Stopped)
+  └ Reserved CPUs: 0 / 1
+  └ Reserved Memory: 0 B / 1.021 GiB
+  └ Labels: kernelversion=4.1.10-17.31.amzn1.x86_64, operatingsystem=Amazon Linux AMI 2015.09, storagedriver=devicemapper
+  └ UpdatedAt: 2016-08-15T12:32:33Z
+  └ ServerVersion: 1.11.2
+Plugins: 
+ Volume: 
+ Network: 
+Kernel Version: 4.1.10-17.31.amzn1.x86_64
+Operating System: linux
+Architecture: amd64
+CPUs: 2
+Total Memory: 2.042 GiB
+Name: d1c05a2eb3ca
+Docker Root Dir: 
+Debug mode (client): false
+Debug mode (server): false
+WARNING: No kernel memory limit support
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker -H :4000 infops[Kimagesrun -d -p 4000:4000 swarm manage -H :4000 --replication --advertise 52.59.96.240:4000 consul://52.59.27.121:8500[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[38Pswarm join --advertise=52.59.96.240:2375[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Psudo docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cservice docker stop[Kdocker rm -f `docker ps -a -q`^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[Cp': docker pse': docker -H :4000 run -p 9090:8080 petclinic[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+^C
+
+
+^X^C^X^C
+
+
+
+
+
+
+
+
+^C^C^C
+^C
+^C
+^C
+^C
+^C
+
+^C
+An error occurred trying to connect: Post http://localhost:4000/v1.23/containers/c7df403e581bef52b0a313852d3b760c38f200c5cf4b4b50536e9cc6fe663751/wait: EOF
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ 
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ docker -H :4000 run -p 9090:8080 petclinic^C
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ [8P(reverse-i-search)`':[C:': docker -H :4000 run -p 9090:8080 petclinic[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@4[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinfo[K[3@[ec2-user@ip-172-31-6-180 ~]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Kps
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ dc[K[Kcd [K[K[Kls
+[0m[01;34mmaven[0m  [01;34mmydockerimage[0m  [01;34mmyrepo[0m  [01;34mpetclinic[0m
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ ls ls [K[K[Kmyrepo/
+Dockerfile.j2  README.md  create_image.yml  docker_commands  screenlog.0  setup.yml
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ ls mydockerimage/
+Dockerfile  [0m[01;31mpetclinic.war[0m
+]0;ec2-user@ip-172-31-6-180:~\[ec2-user@ip-172-31-6-180 ~]$ my [K[K[Kcd d[Kmydockerimage/
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ git init
+Initialized empty Git repository in /home/ec2-user/mydockerimage/.git/
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ echo "# mydockerimage-" >> README.md
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ git add README.md
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ git commit -m "first commit"
+[master (root-commit) a608b20] first commit
+ Committer: EC2 Default User <ec2-user@ip-172-31-6-180.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ git remote add origin https://github.com/Matti2010/mydockerimage-.git
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ git push -u origin master
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 3, done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 259 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Matti2010/mydockerimage-.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ [20P(reverse-i-search)`':[Ca': git push -u origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd': git remote add origin https://github.com/Matti2010/mydockerimage-.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C.': git add .[K[15@[ec2-user@ip-172-31-6-180 mydockerimage]$[C[C[C[C[C
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ [20P(reverse-i-search)`':[Cc': git remote add origin https://github.com/Matti2010/mydockerimage-.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[40Pm': git commit -m "first commit"[16@[ec2-user@ip-172-31-6-180 mydockerimage]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master ee13eb4] first commit
+ Committer: EC2 Default User <ec2-user@ip-172-31-6-180.eu-central-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 9 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 petclinic.war
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ [20P(reverse-i-search)`':[Cp': git push -u origin master[1@u[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[16@[ec2-user@ip-172-31-6-180 mydockerimage]$[C[C[C[C[C
+Username for 'https://github.com': mati.amsalem@gmail.com
+Password for 'https://mati.amsalem@gmail.com@github.com': 
+Counting objects: 4, done.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects:  75% (3/4), 1.05 MiB | 1.53 MiB/s   Writing objects:  75% (3/4), 15.65 MiB | 8.93 MiB/s   Writing objects:  75% (3/4), 27.84 MiB | 10.03 MiB/s   Writing objects: 100% (4/4), 33.66 MiB | 10.23 MiB/s   Writing objects: 100% (4/4), 34.26 MiB | 10.23 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Matti2010/mydockerimage-.git
+   a608b20..ee13eb4  master -> master
+Branch master set up to track remote branch master from origin.
+]0;ec2-user@ip-172-31-6-180:~/mydockerimage\[ec2-user@ip-172-31-6-180 mydockerimage]$ cd ../myrepo/
+]0;ec2-user@ip-172-31-6-180:~/myrepo\[ec2-user@ip-172-31-6-180 myrepo]$ [13P(reverse-i-search)`':[Ca': git push -u origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pd': git add .
