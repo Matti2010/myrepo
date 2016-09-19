@@ -1,0 +1,121 @@
+16/11/15
+welcome new pi home server - S3
+welcome openvpn following this instruction: http://www.bbc.com/news/technology-33548728
+
+..some data here might be lost
+
+8/9/13
+new tvheadend upgrade -> 3.4.27
+nfs is alive!! the following was added to /etc/exports:
+/mnt/nas2 10.0.1.0/24(rw,no_root_squash,insecure)
+
+4/9/13
+plexmediacenter was installed again
+
+21/5/13
+welcome mail (mailustils,postfix)
+df -h | mail -s "111MMMdiskspace_report" mati.amsalem@gmail.com
+
+20/5/13
+todo: get rid of:
+kern.log.0:Apr 22 11:48:30 localhost kernel: [61242.424639] DVB (dvb_dmxdev_filter_start): could not alloc feed
+
+13/5/13
+for dd cmd use:
+cat /mnt/hgfs/C/Cygwin/tmp/pi.img | pv -brt | dd of=/dev/sdb bs=4096
+or
+sudo dd if=/mnt/hgfs/C/Cygwin/tmp/pi.img of=/dev/sdb
+
+13/5/13
+added fix to SPC (grep S1 when runing avahi-daemon @ sleepproxyclient.py
+also backed up all SPC scripts
+more fixes to SPC scipts
+
+11/5/13
+welcome ajaxplorer and webmin
+
+24/4/13
+ICS on pi, following this guide:
+https://help.ubuntu.com/community/Internet/ConnectionSharing
+note: pi's eth0 gw and dns has to be (0.0.0.0)
+sudo ip addr add 192.168.0.1/24 dev eth0
+
+sudo iptables -A FORWARD -o wlan0 -i eth0 -s 192.168.0.0/24 -m conntrack --ctstate NEW -j ACCEPT
+sudo iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -t nat -F POSTROUTING
+sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+
+sudo iptables-save | sudo tee /etc/iptables.sav
+
+#save into /etc/rc.local
+iptables-restore < /etc/iptables.sav
+
+sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+
+#uncomment in /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+also this could help - not must:
+iptables --flush            
+iptables --table nat --flush
+iptables --delete-chain     
+iptables --table nat --delete-chain
+
+
+23/4/13
+rsyslog installed
+edit sleepproxyclient.py line 169
+
+22/4/13
+runDVDRip.sh
+HandBrakeCLI -i /dev/cdrom -o /mnt/nas2/Media/videos/eagles.mp4  -e x264 -q 20.0 -a 1,1 -E faac,copy:ac3 -B 160,160 -6 dpl2,auto -R Auto,Auto -D 0.0,0.0 -f mp4 --detelecine --decomb --loose-anamorphic -m -x b-adapt=2:rc-lookahead=50
+
+22/4/13
+removed openvpn and transmission-deamon from init script
+sudo update-rc.d -f openvpn
+
+21/4/13
+fixwakeup.sh added
+1. Make the script with desired commands.
+vi fixwakeup.sh
+2. Copy the script to /etc/init.d
+cp fixwakeup.sh /etc/init.d/fixwakeup.sh
+3. Change permission to allow execution
+chmod +x /etc/init.d/fixwakeup.sh
+4. At /etc/init.d Link it!
+sudo update-rc.d fixwakeup.sh start 99 2 .
+(do not forget the "." at the end of the command)
+If you need to disable this script in a near future:
+sudo update-rc.d -f fixwakeup.sh remove
+
+17/4/13
+changed to UTC and the RTC is no UTC also
+added 95_timer.sh to /etc/pm/sleep.d/
+added ACPI wake up time upon first boot --not yet
+
+17/4/13
+Just recall: following has been change to /etc/default/grub (if i'm not mistaken to diasble lightdm)
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX_DEFAULT="text"
+
+17/4/13
+# Set the alarm to five minutes in the future 
+ echo 0 > /sys/class/rtc/rtc0/wakealarm
+ echo `date '+%s' -d '+ 5 minutes'` > /sys/class/rtc/rtc0/wakealarm
+# see the alarm  
+cat /proc/driver/rtc
+ /usr/sbin/pm-suspend
+
+16/4/13
+added: port 3306 mysqd to avhai-deamon @ /etc/avhai-deamon/services
+
+16/4/13
+removed transmmition-deamon&&openvpn services from the startup init using:
+
+sudo update-rc.d mysql remove
+sudo update-rc.d -f mysql remove
+
+in order to revert back:
+sudo update-rc.d mysql default
+
+
